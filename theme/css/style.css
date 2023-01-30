@@ -345,15 +345,6 @@ a:hover {
   animation: left_right 3s ease-in infinite alternate-reverse;
 }
 
-@-webkit-keyframes left_right {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-20px);
-  }
-}
-
 @keyframes left_right {
   0% {
     transform: translateX(0);
@@ -364,15 +355,6 @@ a:hover {
 }
 .up-down-animation {
   animation: up_down 3s ease-in infinite alternate-reverse;
-}
-
-@-webkit-keyframes up_down {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-20px);
-  }
 }
 
 @keyframes up_down {
