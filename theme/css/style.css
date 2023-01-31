@@ -497,6 +497,11 @@ a:hover {
   background-repeat: no-repeat;
 }
 
+.feature-item:is(:hover, :focus) .feature-icon {
+  transition: 350ms;
+  transform: scale(1.125);
+}
+
 .bg-primary {
   background: #008dec !important;
 }

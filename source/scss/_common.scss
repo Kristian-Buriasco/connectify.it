@@ -1,11 +1,8 @@
-
-
 body {
   background-color: $body-color;
   overflow-x: hidden;
   overflow-y: hidden;
 }
-
 
 ::selection {
   background: lighten($color: $primary-color, $amount: 10);
@@ -48,7 +45,7 @@ a,
 button,
 select {
   cursor: pointer;
-  transition: .2s ease;
+  transition: 0.2s ease;
 
   &:focus {
     outline: 0;
@@ -100,13 +97,13 @@ a:hover {
 
   &::before {
     position: absolute;
-    content: '';
+    content: "";
     height: 100%;
     width: 100%;
     top: 0;
     left: 0;
     background: $black;
-    opacity: .5;
+    opacity: 0.5;
   }
 }
 
@@ -124,6 +121,10 @@ a:hover {
   background-repeat: no-repeat;
 }
 
+.feature-item:is(:hover, :focus) .feature-icon {
+  transition: 350ms;
+  transform: scale(1.125);
+}
 
 .bg-primary {
   background: $primary-color !important;
@@ -141,7 +142,7 @@ a:hover {
   color: $text-color-dark !important;
 }
 
-.text-purple{
+.text-purple {
   color: #9491ff !important;
 }
 
@@ -257,6 +258,6 @@ a:hover {
   }
 }
 
-.zindex-1{
+.zindex-1 {
   z-index: 1;
 }
