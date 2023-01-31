@@ -19,6 +19,11 @@
 
   // loader fadeout
   $(window).on("load", () => {
+
+    const page = (window.location.pathname.split("/").at(-1) || "index.html").replace(".html", "");
+
+    $(`.footer a[page-name="${page}"]`).attr("href", "#");
+
     $(".loader-wrapper").fadeOut();
     $("body").css("overflow-y", "scroll");
   });
