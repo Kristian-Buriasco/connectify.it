@@ -8,7 +8,7 @@
   border-radius: 5px;
   position: relative;
   z-index: 1;
-  transition: .2s ease;
+  transition: 0.2s ease;
 
   &:focus {
     outline: 0;
@@ -50,6 +50,6 @@
   }
 }
 
-.btn-lg{
+.btn-lg {
   padding: 15px 85px;
 }
