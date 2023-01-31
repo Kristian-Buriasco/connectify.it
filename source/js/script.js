@@ -11,9 +11,9 @@
   });
 
   // loader fadeout
-  
   $(window).on("load", () => {
     $(".loader-wrapper").fadeOut();
+    $("body").css("overflow-y", "scroll");
   });
 
   // team slider
