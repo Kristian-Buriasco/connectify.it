@@ -386,15 +386,11 @@ a:hover {
   }
 }
 
-.nav-bg {
+.rouded .nav-bg {
   background-color: snow;
-  border-radius: 20px;
 }
-.nav-bg .navbar {
+.rouded .nav-bg .navbar {
   padding: 10px 0;
-}
-.nav-bg .container {
-  background-color: ghostwhite;
 }
 
 .nav-item {
