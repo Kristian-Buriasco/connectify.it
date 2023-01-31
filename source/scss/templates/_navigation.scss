@@ -14,11 +14,11 @@
     }
   }
 }
-
+.rounded-20{
+  border-radius: 20px;
+}
 .nav-bg {
-  background-color: $white;
-  box-shadow: 0px 10px 20px 0px rgba(0, 141, 236, 0.10);
-
+  background-color: ghostwhite;
   .navbar {
     padding: 10px 0;
   }
