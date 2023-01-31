@@ -387,11 +387,14 @@ a:hover {
 }
 
 .nav-bg {
-  background-color: #fff;
-  box-shadow: 0px 10px 20px 0px rgba(0, 141, 236, 0.1);
+  background-color: snow;
+  border-radius: 20px;
 }
 .nav-bg .navbar {
   padding: 10px 0;
+}
+.nav-bg .container {
+  background-color: ghostwhite;
 }
 
 .nav-item {
