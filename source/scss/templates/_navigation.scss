@@ -8,6 +8,7 @@
 
 .navbar {
   transition: .3s ease;
+  text-align:center;
   &-collapse{
     @include desktop {
       padding-bottom: 20px;
