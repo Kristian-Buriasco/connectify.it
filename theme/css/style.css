@@ -684,7 +684,7 @@ a:hover {
 }
 
 .nav-bg {
-  background-color: white;
+  background-color: ghostwhite;
 }
 .nav-bg .navbar {
   padding: 10px 0;
@@ -709,9 +709,8 @@ a:hover {
   padding-block: 0;
 }
 
-.nav-link[href="#"] {
-  color: black;
-  font-weight: 400;
+.nav-link[href="#"]::after {
+  transform: scaleX(1);
 }
 
 .nav-link::after {
@@ -720,7 +719,7 @@ a:hover {
   top: 99%;
   left: 0;
   width: 100%;
-  background-color: #000;
+  background-color: #101629;
   height: 2px;
   transform: scaleX(0);
   transform-origin: left;
@@ -729,11 +728,6 @@ a:hover {
 
 .nav-link:not(.nav-link[href="#"]):is(:hover, :focus)::after {
   transform: scaleX(1);
-}
-
-.nav-link:not(.nav-link[href="#"]):is(:hover, :focus) {
-  color: black;
-  font-weight: 400;
 }
 
 .hero-section {

@@ -17,8 +17,9 @@
 .rounded-20{
   border-radius: 20px;
 }
+
 .nav-bg {
-  background-color: white;
+  background-color: ghostwhite;
   .navbar {
     padding: 10px 0;
   }
@@ -39,9 +40,8 @@
   padding-block: 0;
 }
 
-.nav-link[href="#"]{
-  color: black;
-  font-weight: 400;
+.nav-link[href="#"]::after{
+  transform: scaleX(1);
 }
 
 .nav-link::after {
@@ -52,7 +52,7 @@
   left: 0;
   width: 100%;
 
-  background-color: #000;
+  background-color: $text-color-dark;
   height: 2px;
   transform: scaleX(0);
   transform-origin: left;
@@ -63,7 +63,4 @@
   transform: scaleX(1);
 }
 
-.nav-link:not(.nav-link[href="#"]):is(:hover, :focus) {
-  color: black;
-  font-weight: 400;
-}
+
