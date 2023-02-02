@@ -9,6 +9,10 @@ body {
   color: $white;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 /* preloader */
 
 .preloader {
@@ -124,6 +128,30 @@ a:hover {
 .feature-item:is(:hover, :focus) .feature-icon {
   transition: 350ms;
   transform: scale(1.125);
+}
+
+.feature-item h4 {
+  position: relative;
+  width: max-content;
+}
+
+.feature-item h4::after {
+  content: "";
+  position: absolute;
+
+  top: 102%;
+  left: 0;
+  width: 100%;
+
+  background-color: #000;
+  height: 2px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: 350ms;
+}
+
+.feature-item:is(:hover, :focus) h4::after {
+  transform: scaleX(1);
 }
 
 .bg-primary {

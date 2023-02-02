@@ -4,8 +4,6 @@ $color-3: rgb(34 254 177);
 $dot-color: rgb(5, 170, 112);
 
 
-
-
 .loader-wrapper {
     position: absolute;
     inset: 0;
@@ -14,7 +12,7 @@ $dot-color: rgb(5, 170, 112);
     height: 100%;
     align-items: center;
     background: $color-1;
-    background: linear-gradient(45deg,
+    background: linear-gradient(70deg,
             $color-1 1%,
             $color-2 22%,
             $color-3 51%,

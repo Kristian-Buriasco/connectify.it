@@ -23,7 +23,7 @@ VERSION:	Versoin Number
   height: 100%;
   align-items: center;
   background: rgb(104, 182, 249);
-  background: linear-gradient(45deg, rgb(104, 182, 249) 1%, rgb(33, 244, 223) 22%, rgb(34, 254, 177) 51%, rgb(33, 244, 223) 83%, rgb(104, 182, 249) 100%);
+  background: linear-gradient(70deg, rgb(104, 182, 249) 1%, rgb(33, 244, 223) 22%, rgb(34, 254, 177) 51%, rgb(33, 244, 223) 83%, rgb(104, 182, 249) 100%);
   display: flex;
   justify-content: center;
 }
@@ -293,7 +293,7 @@ p, .paragraph {
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-  color: #091337;
+  color: #101629;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   line-height: 1.5;
@@ -345,7 +345,7 @@ h6, .h6 {
 
 .btn-primary {
   background-image: linear-gradient(25deg, rgb(23, 255, 211) 0%, rgb(211, 252, 113) 95%);
-  color: #091337;
+  color: #101629;
   transition: background 1s ease-out;
 }
 .btn-primary:active {
@@ -353,20 +353,20 @@ h6, .h6 {
 }
 .btn-primary:hover {
   background: linear-gradient(205deg, rgb(23, 255, 211) 0%, rgb(211, 252, 113) 95%);
-  color: #091337;
+  color: #101629;
 }
 
 .btn-secondary {
   background-image: linear-gradient(6deg, rgb(23, 255, 211) 0%, rgb(35, 227, 238) 100%);
   background-color: transparent;
-  color: #091337;
+  color: #101629;
 }
 .btn-secondary:active {
   background: linear-gradient(6deg, rgb(23, 255, 211) 0%, rgb(35, 227, 238) 100%) !important;
 }
 .btn-secondary:hover {
   background: linear-gradient(186deg, rgb(23, 255, 211) 0%, rgb(35, 227, 238) 100%);
-  color: #091337;
+  color: #101629;
 }
 
 .btn-lg {
@@ -387,6 +387,10 @@ body {
 ::selection {
   background: #20a5ff;
   color: #fff;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 /* preloader */
@@ -502,6 +506,29 @@ a:hover {
   transform: scale(1.125);
 }
 
+.feature-item h4 {
+  position: relative;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.feature-item h4::after {
+  content: "";
+  position: absolute;
+  top: 102%;
+  left: 0;
+  width: 100%;
+  background-color: #000;
+  height: 2px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: 350ms;
+}
+
+.feature-item:is(:hover, :focus) h4::after {
+  transform: scaleX(1);
+}
+
 .bg-primary {
   background: #008dec !important;
 }
@@ -515,7 +542,7 @@ a:hover {
 }
 
 .text-dark {
-  color: #091337 !important;
+  color: #101629 !important;
 }
 
 .text-purple {
@@ -636,7 +663,7 @@ a:hover {
 }
 
 .navbar-light .navbar-nav .nav-link {
-  color: #091337;
+  color: #101629;
 }
 
 .navigation {
@@ -657,7 +684,7 @@ a:hover {
 }
 
 .nav-bg {
-  background-color: ghostwhite;
+  background-color: #22feb1;
 }
 .nav-bg .navbar {
   padding: 10px 0;
@@ -670,6 +697,43 @@ a:hover {
   .nav-item {
     padding: 0;
   }
+}
+
+.nav-link {
+  position: relative;
+  height: -moz-max-content;
+  height: max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin-block: 0;
+  padding-block: 0;
+}
+
+.nav-link[href="#"] {
+  color: black;
+  font-weight: 400;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  top: 99%;
+  left: 0;
+  width: 100%;
+  background-color: #000;
+  height: 2px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: 350ms;
+}
+
+.nav-link:not(.nav-link[href="#"]):is(:hover, :focus)::after {
+  transform: scaleX(1);
+}
+
+.nav-link:not(.nav-link[href="#"]):is(:hover, :focus) {
+  color: black;
+  font-weight: 400;
 }
 
 .hero-section {
@@ -1069,7 +1133,7 @@ a {
 .pricing-btn {
   font-size: 25px;
   font-weight: 700;
-  color: #091337;
+  color: #101629;
 }
 @media (max-width: 1200px) {
   .pricing-btn {
@@ -1169,7 +1233,7 @@ a {
   padding-bottom: 100px;
 }
 .footer-menu a {
-  color: #091337;
+  color: #101629;
   display: block;
   padding: 15px;
   font-weight: 400;
