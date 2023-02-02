@@ -515,7 +515,7 @@ a:hover {
 .feature-item h4::after {
   content: "";
   position: absolute;
-  top: 104%;
+  top: 117%;
   left: 0;
   width: 100%;
   background-color: #000;
@@ -705,8 +705,13 @@ a:hover {
   height: max-content;
   width: -moz-max-content;
   width: max-content;
-  margin-block: 0;
   padding-block: 0;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav-link[href="#"]::after {
