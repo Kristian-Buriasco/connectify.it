@@ -1,8 +1,8 @@
 {
-  "name": "dtox",
+  "name": "connectify",
   "version": "1.0.0",
-  "description": "dtox free bootstrap saas template",
-  "author": "Themefisher",
+  "description": "Connectify is a local web development company that helps small businesses connect with the internet and beyond. Contact us for a consultation.",
+  "author": "Connectify",
   "license": "MIT",
   "scripts": {
     "dev": "gulp",
