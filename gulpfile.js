@@ -22,8 +22,9 @@ var path = {
     plugins: "source/plugins/**/*.*",
     js: "source/js/*.js",
     scss: "source/scss/**/*.scss",
-    images: "source/images/**/*.+(png|jpg|gif|svg)",
+    images: "source/images/**/*.+(png|jpg|gif|svg|ico|webp)",
     fonts: "source/fonts/**/*.+(eot|ttf|woff|woff2|otf)",
+    sitemap: "source/sitemap.xml",
   },
   build: {
     dirBuild: "theme/",
@@ -193,6 +194,7 @@ gulp.task(
     "scss:build",
     "images:build",
     "fonts:build",
-    "plugins:build"
+    "plugins:build",
+    "others:build"
   )
 );
