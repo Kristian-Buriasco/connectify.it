@@ -38,9 +38,9 @@ $(".team-slider").slick({
   slidesToScroll: 1,
   arrows: true,
   prevArrow:
-    "<button type='button' class='prevArrow'><i class='ti-arrow-left'></i></button>",
+    "<button type='button' class='prevArrow' aria-label='Previous'><i class='ti-arrow-left'></i></button>",
   nextArrow:
-    "<button type='button' class='nextArrow'><i class='ti-arrow-right'></i></button>",
+    "<button type='button' class='nextArrow' aria-label='Next'><i class='ti-arrow-right'></i></button>",
   responsive: [
     {
       breakpoint: 1024,
