@@ -105,3 +105,41 @@ jQuery.extend(jQuery.easing, {
     return (c / 2) * (-Math.pow(2, -10 * --t) + 2) + b;
   },
 });
+
+
+// lazy laod images
+const images = $("img[src]");
+
+
+
+const imageOptions = {
+  threshold: 0,
+  rootMargin: "0px 0px 300px 0px",
+};
+
+const imageObserver = new IntersectionObserver((entries, imgObserver) => {
+  entries.forEach((entry) => {
+    if(!entry.isIntersecting)
+    {
+      return;
+    }
+
+    preloadImage(entry.target);
+    imgObserver.unobserve(entry.target);
+  });
+}, imageOptions);
+
+function preloadImage(img) { 
+  const src = img.getAttribute("src");
+
+  if(!src)
+  {
+    return;
+  }
+
+  img.src = src;
+};
+
+$.each(images, (i, image) => {
+  imageObserver.observe(image);
+});
