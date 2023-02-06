@@ -1,4 +1,5 @@
 // Sticky Menu
+"use strict";
 $(window).scroll(function () {
   const navigation = $(".navigation");
 
