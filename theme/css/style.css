@@ -504,6 +504,10 @@ a:hover {
   transform: scale(1.125);
 }
 
+.feature-item {
+  gap: 15px;
+}
+
 .feature-item h4 {
   position: relative;
   width: -moz-max-content;
@@ -675,6 +679,11 @@ a:hover {
   .navbar-collapse {
     padding-bottom: 20px;
   }
+}
+
+.navbar-collapse {
+  justify-content: flex-end;
+  margin-right: 5%;
 }
 
 .rounded-20 {
