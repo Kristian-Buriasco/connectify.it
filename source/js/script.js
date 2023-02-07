@@ -19,11 +19,10 @@ window.addEventListener("beforeunload", () => {
 
 // loader fadeout
 $(window).on("load", () => {
-  const page = (
-    window.location.pathname.split("/").at(-1) || "index.html"
-  ).replace(".html", "");
+  const page = window.location.pathname.split("/").at(-1) || "index.html";
 
-  $(`.footer a[page-name="${page}"]`).attr("href", "#");
+  $(`.footer a[href="${page}"]`).attr("href", "#");
+  $(`.navigation a[href="${page}"]`).attr("href", "#");
 
   $(".loader-wrapper").fadeOut(400, () => $("body").css("overflow-y", "scroll"));
 });
@@ -107,3 +106,6 @@ function preloadImage(img) {
 $.each(images, (i, image) => {
   imageObserver.observe(image);
 });
+
+
+
