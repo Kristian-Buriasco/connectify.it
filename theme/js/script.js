@@ -109,13 +109,13 @@ jQuery.extend(jQuery.easing, {
 
 
 // lazy laod images
-const images = $("img[src]");
+const images = $("img[data-src]");
 
 
 
 const imageOptions = {
   threshold: 0,
-  rootMargin: "0px 0px 300px 0px",
+  rootMargin: "0px 0px 400px 0px",
 };
 
 const imageObserver = new IntersectionObserver((entries, imgObserver) => {
@@ -131,7 +131,7 @@ const imageObserver = new IntersectionObserver((entries, imgObserver) => {
 }, imageOptions);
 
 function preloadImage(img) { 
-  const src = img.getAttribute("src");
+  const src = img.getAttribute("data-src");
 
   if(!src)
   {

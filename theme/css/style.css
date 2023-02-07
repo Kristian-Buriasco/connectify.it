@@ -504,10 +504,6 @@ a:hover {
   transform: scale(1.125);
 }
 
-.feature-item {
-  gap: 15px;
-}
-
 .feature-item h4 {
   position: relative;
   width: -moz-max-content;
