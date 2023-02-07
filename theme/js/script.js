@@ -111,8 +111,6 @@ jQuery.extend(jQuery.easing, {
 // lazy laod images
 const images = $("img[data-src]");
 
-
-
 const imageOptions = {
   threshold: 0,
   rootMargin: "0px 0px 400px 0px",
