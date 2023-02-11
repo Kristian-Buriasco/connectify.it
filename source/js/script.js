@@ -47,6 +47,7 @@ $(window).on("load", () => {
     window.location.href = href.substring(0, href.indexOf("#"));
   }
 
+
   $(".loader-wrapper").fadeOut(400);
 });
 
@@ -181,14 +182,23 @@ links
     cursor.removeClass("custom-cursor-hover");
   })
 
-$(window).on("mousemove", (e) => {
-  const x = e.clientX + "px";
-  const y = e.clientY + "px";
 
-  cursor.show();
-
-  cursor.css({
-    left: x,
-    top: y
+if(!isTouchDevice()) {
+  $(window).on("mousemove", (e) => {
+    const x = e.clientX + "px";
+    const y = e.clientY + "px";
+  
+    cursor.show();
+  
+    cursor.css({
+      left: x,
+      top: y
+    })
   })
-})
+}
+
+function isTouchDevice() {
+  return (('ontouchstart' in window) ||
+    (navigator.maxTouchPoints > 0) ||
+    (navigator.msMaxTouchPoints > 0));
+}
