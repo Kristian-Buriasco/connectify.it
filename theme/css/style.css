@@ -426,7 +426,6 @@ a:focus {
 a,
 button,
 select {
-  cursor: pointer;
   transition: 0.2s ease;
 }
 a:focus,
@@ -659,6 +658,36 @@ a:hover {
 }
 .zindex-1 {
   z-index: 1;
+}
+
+.custom-cursor {
+  position: fixed;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: white;
+  transition: transform 350ms ease;
+  transform: translate(-50%, -50%) scale(0.3);
+  z-index: 1000000000;
+}
+
+* {
+  cursor: none !important;
+}
+
+.custom-cursor-hover {
+  transform: translate(-50%, -50%) scale(0.7);
+  background-color: transparent;
+  border: 3px solid white;
+}
+.custom-cursor-hover::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
 }
 
 .navbar-light .navbar-nav .nav-link {

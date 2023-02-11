@@ -11,6 +11,7 @@ $(window).scroll(function () {
   navigation.toggleClass("nav-bg", navigation.offset().top > height);
 });
 
+
 // to center loader
 window.addEventListener("beforeunload", () => {
   window.scrollTo({
@@ -164,3 +165,28 @@ const sectionObserver = new IntersectionObserver((entries, sectionObserver) => {
 $.each(sections, (i, section) => {
   sectionObserver.observe(section);
 });
+
+
+
+
+// custom cursor 
+const links = $("a, button, select");
+const cursor = $(".custom-cursor");
+
+links
+  .on("mouseover", () => {
+    cursor.addClass("custom-cursor-hover");
+  })
+  .on("mouseout", () => {
+    cursor.removeClass("custom-cursor-hover");
+  })
+
+$(window).on("mousemove", (e) => {
+  const x = e.clientX + "px";
+  const y = e.clientY + "px";
+
+  cursor.css({
+    left: x,
+    top: y
+  })
+})
