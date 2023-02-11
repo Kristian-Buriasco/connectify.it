@@ -34,11 +34,19 @@ $(window).on("load", () => {
     link.setAttribute("href", href);
   })
 
-  if(window.location.href.includes("#"))
-  {
+  const pageAccessedByReload = (
+    (window.performance.navigation && window.performance.navigation.type === 1) ||
+      window.performance
+        .getEntriesByType('navigation')
+        .map((nav) => nav.type)
+        .includes('reload')
+  );
+
+  if(pageAccessedByReload && window.location.href.includes("#")) {
     const href = window.location.href;
-    window.location = href.substring(0, href.indexOf("#"));
+    window.location.href = href.substring(0, href.indexOf("#"));
   }
+
 
   $(".loader-wrapper").fadeOut(400);
 });
