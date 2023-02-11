@@ -34,6 +34,12 @@ $(window).on("load", () => {
     link.setAttribute("href", href);
   })
 
+  if(window.location.href.includes("#"))
+  {
+    const href = window.location.href;
+    window.location = href.substring(0, href.indexOf("#"));
+  }
+
   $(".loader-wrapper").fadeOut(400);
 });
 
