@@ -112,4 +112,37 @@ $.each(images, (i, image) => {
 });
 
 
+// section observer 
+const sections = $(`section[class^="section"] > div[class^="container"]`);
 
+const scaling = 0.8;
+
+sections.css({
+  "transform": `scale(${scaling})`,
+  "transition": "350ms ease"
+});
+
+const sectionObserverOptions = {
+  threshold: 0,
+  rootMargin: "0px 0px -300px 0px",
+};
+
+const sectionObserver = new IntersectionObserver((entries, sectionObserver) => {
+  entries.forEach((entry) => {
+    const section = $(entry.target);
+
+    if(!entry.isIntersecting)
+    {
+      section.css("transform",`scale(${scaling})`);
+      return;
+    }
+
+    section.css("transform", "scale(1)");
+  });
+}, sectionObserverOptions);
+
+
+
+$.each(sections, (i, section) => {
+  sectionObserver.observe(section);
+});
