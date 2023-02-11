@@ -373,6 +373,14 @@ html {
 body {
   background-color: #fff;
   overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+.scroll-wrapper {
+  width: 100vw;
+  height: 100vh;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
 }
 
 ::-moz-selection {
@@ -440,6 +448,17 @@ a:hover {
 
 .slick-slide {
   outline: 0;
+}
+
+section:not(.navigation) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section:not(.navigation, .newsletter) {
+  width: 100vw;
+  height: 100vh;
 }
 
 .section {
@@ -763,6 +782,9 @@ a:hover {
   transform: translateX(-50%);
 }
 
+.hero {
+  position: relative;
+}
 .hero-bg-1 {
   position: absolute;
   left: 30px;

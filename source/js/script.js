@@ -1,5 +1,9 @@
 // Sticky Menu
 "use strict";
+
+const sections = $(`section[class^="section"]`);
+
+
 $(window).scroll(function () {
   const navigation = $(".navigation");
 
@@ -19,7 +23,9 @@ window.addEventListener("beforeunload", () => {
 
 // loader fadeout
 $(window).on("load", () => {
-  const page = window.location.pathname.split("/").at(-1) || "index.html";
+  let pagename = window.location.pathname.split("/").at(-1) || "index.html";
+
+  const page = pagename.endsWith(".html") ? pagename : pagename + ".html";
 
   const navigation_footer = $(".navigation, .footer");
 
@@ -113,11 +119,11 @@ $.each(images, (i, image) => {
 
 
 // section observer 
-const sections = $(`section[class^="section"] > div[class^="container"]`);
+const sections_container =  sections.find(`div[class^="container"]`);
 
 const scaling = 0.8;
 
-sections.css({
+sections_container.css({
   "transform": `scale(${scaling})`,
   "transition": "350ms ease"
 });
@@ -143,6 +149,6 @@ const sectionObserver = new IntersectionObserver((entries, sectionObserver) => {
 
 
 
-$.each(sections, (i, section) => {
+$.each(sections_container, (i, section) => {
   sectionObserver.observe(section);
 });
