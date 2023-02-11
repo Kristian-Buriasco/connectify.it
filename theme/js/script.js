@@ -34,7 +34,7 @@ $(window).on("load", () => {
     link.setAttribute("href", href);
   })
 
-  $(".loader-wrapper").fadeOut(400, () => $("body").css("overflow-y", "scroll"));
+  $(".loader-wrapper").fadeOut(400);
 });
 
 // team slider
