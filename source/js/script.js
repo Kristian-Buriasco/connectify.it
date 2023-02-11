@@ -47,7 +47,6 @@ $(window).on("load", () => {
     window.location.href = href.substring(0, href.indexOf("#"));
   }
 
-
   $(".loader-wrapper").fadeOut(400);
 });
 
@@ -173,6 +172,7 @@ $.each(sections, (i, section) => {
 const links = $("a, button, select");
 const cursor = $(".custom-cursor");
 
+
 links
   .on("mouseover", () => {
     cursor.addClass("custom-cursor-hover");
@@ -184,6 +184,8 @@ links
 $(window).on("mousemove", (e) => {
   const x = e.clientX + "px";
   const y = e.clientY + "px";
+
+  cursor.show();
 
   cursor.css({
     left: x,

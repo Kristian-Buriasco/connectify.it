@@ -661,6 +661,7 @@ a:hover {
 }
 
 .custom-cursor {
+  display: none;
   position: fixed;
   pointer-events: none;
   mix-blend-mode: difference;
