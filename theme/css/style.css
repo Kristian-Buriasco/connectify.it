@@ -376,13 +376,6 @@ body {
   scroll-behavior: smooth;
 }
 
-.scroll-wrapper {
-  width: 100vw;
-  height: 100vh;
-  overflow-y: auto;
-  scroll-snap-type: y mandatory;
-}
-
 ::-moz-selection {
   background: #20a5ff;
   color: #fff;

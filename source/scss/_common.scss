@@ -9,14 +9,6 @@ body {
   scroll-behavior: smooth;
 }
 
-.scroll-wrapper {
-  width: 100vw;
-  height: 100vh;
-  overflow-y: auto;
-
-  scroll-snap-type: y mandatory;
-}
-
 ::selection {
   background: lighten($color: $primary-color, $amount: 10);
   color: $white;
