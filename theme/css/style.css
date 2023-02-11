@@ -682,13 +682,6 @@ a:hover {
   background-color: transparent;
   border: 3px solid white;
 }
-.custom-cursor-hover::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-}
 
 .navbar-light .navbar-nav .nav-link {
   color: #101629;
