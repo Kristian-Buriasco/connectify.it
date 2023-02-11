@@ -1,8 +1,7 @@
 // Sticky Menu
 "use strict";
-
-const sections = $(`section[class^="section"]`);
-
+// sections of page
+const sections =  $(`section[class^="section"] div[class^="container"]`);
 
 $(window).scroll(function () {
   const navigation = $(".navigation");
@@ -133,11 +132,10 @@ $.each(images, (i, image) => {
 
 
 // section observer 
-const sections_container =  sections.find(`div[class^="container"]`);
 
 const scaling = 0.8;
 
-sections_container.css({
+sections.css({
   "transform": `scale(${scaling})`,
   "transition": "350ms ease"
 });
@@ -163,6 +161,6 @@ const sectionObserver = new IntersectionObserver((entries, sectionObserver) => {
 
 
 
-$.each(sections_container, (i, section) => {
+$.each(sections, (i, section) => {
   sectionObserver.observe(section);
 });
