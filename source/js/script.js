@@ -21,8 +21,12 @@ window.addEventListener("beforeunload", () => {
 $(window).on("load", () => {
   const page = window.location.pathname.split("/").at(-1) || "index.html";
 
-  $(`.footer a[href="${page}"]`).attr("href", "#");
-  $(`.navigation a[href="${page}"]`).attr("href", "#");
+  const navigation_footer = $(".navigation, .footer");
+
+  [...navigation_footer.find(`a[href^="${page}"]`)].forEach(link => {
+    const href = link.getAttribute("href").replace(page, "") || "#";
+    link.setAttribute("href", href);
+  })
 
   $(".loader-wrapper").fadeOut(400, () => $("body").css("overflow-y", "scroll"));
 });
