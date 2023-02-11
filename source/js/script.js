@@ -171,15 +171,15 @@ $.each(sections, (i, section) => {
 
 // custom cursor 
 const links = $("a, button, select");
-const cursor = $(".custom-cursor");
+const mouse_cursor = $(".custom-cursor");
 
 
 links
   .on("mouseover", () => {
-    cursor.addClass("custom-cursor-hover");
+    mouse_cursor.addClass("custom-cursor-hover");
   })
   .on("mouseout", () => {
-    cursor.removeClass("custom-cursor-hover");
+    mouse_cursor.removeClass("custom-cursor-hover");
   })
 
 
@@ -188,9 +188,9 @@ if(!isTouchDevice()) {
     const x = e.clientX + "px";
     const y = e.clientY + "px";
   
-    cursor.show();
+    mouse_cursor.show();
   
-    cursor.css({
+    mouse_cursor.css({
       left: x,
       top: y
     })
