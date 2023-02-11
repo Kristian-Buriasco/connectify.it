@@ -704,6 +704,7 @@ a:hover {
 }
 
 .nav-item {
+  text-align: center;
   padding: 20px 10px;
 }
 @media (max-width: 991px) {
