@@ -213,5 +213,6 @@ $(window).on("mousemove", (e) => {
 
 // to remove cursor on mobile
 $(window).on("touchend", (e) => {
+  mouse_cursor.hide();
   e.preventDefault();
 })
