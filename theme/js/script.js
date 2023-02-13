@@ -42,6 +42,7 @@ $(window).on("load", () => {
 
   new fullpage('#fullpage', {
     //options here
+    licenseKey: "gplv3-license",
     autoScrolling:true,
     responsiveWidth: 800,
     paddingTop: "150px",
