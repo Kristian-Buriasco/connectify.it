@@ -49,7 +49,11 @@ $(window).on("load", () => {
     onLeave: function({index}) {
       if(index === 0)
       {
-        $(".navigation").toggleClass("nav-bg");
+        $(".navigation").addClass("nav-bg");
+      }
+      else if(index === 1)
+      {
+        $(".navigation").removeClass("nav-bg");
       }
     }
   });
