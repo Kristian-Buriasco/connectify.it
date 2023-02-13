@@ -3,15 +3,6 @@
 // sections of page
 const sections =  $(`section[class^="section"] div[class^="container"]`);
 
-$(window).scroll(function () {
-  const navigation = $(".navigation");
-
-  const height = window.innerWidth > 768 ? 100 : 30;
-
-  navigation.toggleClass("nav-bg", navigation.offset().top > height);
-});
-
-
 // to center loader
 window.addEventListener("beforeunload", () => {
   window.scrollTo({
@@ -52,7 +43,15 @@ $(window).on("load", () => {
   new fullpage('#fullpage', {
     //options here
     autoScrolling:true,
-    responsiveWidth: 800
+    responsiveWidth: 800,
+    verticalCentered:true,
+
+    onLeave: function({index}) {
+      if(index === 0)
+      {
+        $(".navigation").toggleClass("nav-bg");
+      }
+    }
   });
 
 

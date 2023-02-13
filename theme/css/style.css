@@ -391,6 +391,18 @@ body {
   padding: 0;
 }
 
+#fullPage {
+  overflow-x: hidden;
+}
+
+.fp-watermark {
+  display: none;
+}
+
+footer a {
+  margin: 0;
+}
+
 /* preloader */
 .preloader {
   position: fixed;
@@ -711,6 +723,7 @@ a:hover {
 }
 
 .nav-item {
+  position: relative;
   text-align: center;
   padding: 20px 10px;
 }
@@ -754,6 +767,16 @@ a:hover {
 
 .nav-link:not(.nav-link[href="#"]):is(:hover, :focus)::after {
   transform: scaleX(1);
+}
+
+.nav-item[data-redirect]::before {
+  content: "";
+  position: absolute;
+  background-color: black;
+  top: 15%;
+  bottom: 15%;
+  width: 1px;
+  left: -5%;
 }
 
 .hero-section {
