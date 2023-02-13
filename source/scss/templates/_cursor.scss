@@ -18,8 +18,29 @@
 }
 
 .custom-cursor-hover {
-    transform: translate(-50%, -50%) scale(0.7);
+    transform: translate(-50%, -50%) scale(0.6);
     background-color: transparent;
-    border: 3px solid white;
+    border: 3px solid black;
+    mix-blend-mode: normal;
+
+    animation-name: pulse;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
 }
 
+@keyframes pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(0.5);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+    }
+    
+    70% {
+        transform: translate(-50%, -50%) scale(0.6);
+        box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+    }
+    
+    100% {
+        transform: translate(-50%, -50%) scale(0.5);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+}

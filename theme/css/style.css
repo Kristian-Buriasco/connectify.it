@@ -678,11 +678,29 @@ a:hover {
 }
 
 .custom-cursor-hover {
-  transform: translate(-50%, -50%) scale(0.7);
+  transform: translate(-50%, -50%) scale(0.6);
   background-color: transparent;
-  border: 3px solid white;
+  border: 3px solid black;
+  mix-blend-mode: normal;
+  animation-name: pulse;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
 }
 
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(0.5);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+  }
+  70% {
+    transform: translate(-50%, -50%) scale(0.6);
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0.5);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
 .navbar-light .navbar-nav .nav-link {
   color: #101629;
 }
@@ -795,6 +813,7 @@ a:hover {
   background-size: cover;
   background-position: bottom center;
   margin-bottom: 300px;
+  z-index: -1;
 }
 
 .banner-image {
@@ -806,6 +825,9 @@ a:hover {
 
 .hero {
   position: relative;
+}
+.hero img {
+  z-index: -1;
 }
 .hero-bg-1 {
   position: absolute;
@@ -899,6 +921,9 @@ a:hover {
   .hero-bg-9 {
     display: none;
   }
+}
+.hero h1 {
+  z-index: 10;
 }
 
 a {
@@ -1284,7 +1309,7 @@ a {
   background-repeat: no-repeat;
 }
 .footer-section {
-  padding-top: 500px;
+  padding-top: 500px !important;
   padding-bottom: 100px;
 }
 .footer-menu a {

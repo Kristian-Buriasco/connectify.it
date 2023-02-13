@@ -5,6 +5,7 @@
   background-size: cover;
   background-position: bottom center;
   margin-bottom: 300px;
+  z-index: -1;
 }
 
 .banner-image {
@@ -16,6 +17,11 @@
 
 .hero {
   position: relative;
+
+  & img {
+    z-index: -1;
+  }
+
   &-bg-1 {
     position: absolute;
     left: 30px;
@@ -108,8 +114,14 @@
       display: none;
     }
   }
+
+  & h1 {
+    z-index: 10;
+  }
+
 }
 
 a{
   margin: 10px;
 }
+
