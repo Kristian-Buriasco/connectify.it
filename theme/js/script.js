@@ -48,15 +48,16 @@ $(window).on("load", () => {
     paddingTop: "150px",
 
     beforeLeave: function(origin, destination){
-      const index_origin = origin.index;
-      const index_destination = destination.index;
+      const { index: index_origin } = origin;
+      const { index: index_destination } = destination;
+
       const navigation = $(".navigation");
 
       if(index_origin < index_destination)
       {
         navigation.addClass("nav-bg");
       }
-      else if(index_origin === 1 && index_origin > index_destination)
+      else if (index_destination === 0)
       {
         navigation.removeClass("nav-bg");
       }
