@@ -15,7 +15,6 @@ body {
 }
 
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -72,26 +71,10 @@ a:hover {
 
 
 .section {
-  padding-top: 130px;
-  padding-bottom: 130px;
-
-  &-sm {
-    padding-top: 40px;
-    padding-bottom: 40px;
-  }
-
-  &-lg {
-    padding-top: 200px;
-    padding-bottom: 200px;
-
-    @include mobile {
-      padding-top: 150px;
-      padding-bottom: 150px;
-    }
-  }
-
+  padding-top: 100px;
+  
   &-title {
-    margin-bottom: 30px;
+    margin-bottom: 30.000000000px;
   }
 }
 

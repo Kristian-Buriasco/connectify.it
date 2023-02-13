@@ -58,6 +58,13 @@
             crossorigin="anonymous" 
             referrerpolicy="no-referrer" />
 
+      <!-- fullpage css -->
+      <link rel="stylesheet" 
+            href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.15/fullpage.min.css" 
+            integrity="sha512-FKlWnaJrtBEqH+gNy8kvp+/61S+8iOKb5tG+EKCQ3Fc3iUYr9MvnywpkZBcuNKrxQxlnZYpNwDgkZ2atX7wVVg==" 
+            crossorigin="anonymous" 
+            referrerpolicy="no-referrer" />
+
       <!-- Main Stylesheet -->
       <link href="css/style.css" rel="stylesheet" />
 
@@ -143,13 +150,13 @@
             <a class="nav-link" href="index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link page-scroll" href="index.html#feature">Servizi</a>
+            <a class="nav-link page-scroll" href="index.html#feature-anchor">Servizi</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link page-scroll" href="index.html#about">Su di Noi</a>
+            <a class="nav-link page-scroll" href="index.html#about-anchor">Su di Noi</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link page-scroll" href="index.html#team">Team</a>
+            <a class="nav-link page-scroll" href="index.html#team-anchor">Team</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="contact.html">Contattaci</a>
@@ -162,8 +169,9 @@
 <!-- /navigation -->
 
 
-<!-- contact -->
-<section class="section-lg contact">
+<div id="fullpage">
+    <!-- contact -->
+<section class="section fp-auto-height section-lg contact">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
@@ -199,9 +207,9 @@
 <!-- /contact -->
 
 
-<!-- footer -->
+    <!-- footer -->
 <footer
-  class="footer-section footer"
+  class="section fp-auto-height footer-section footer"
   style="background-image: url(images/backgrounds/footer-bg.webp)"
 >
   <div class="container">
@@ -253,6 +261,7 @@
 </footer>
 <!-- /footer -->
 
+</div>
 
 <!-- jQuery -->
 <script 
@@ -272,6 +281,14 @@
 <script 
         src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" 
         integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" 
+        crossorigin="anonymous" 
+        referrerpolicy="no-referrer">
+</script>
+
+<!-- fullpage js -->
+<script 
+        src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.15/fullpage.min.js" 
+        integrity="sha512-rNf09cQHIWzD8BU37lIb3rInygeWXW2hVqJ7niVtTPXWuVR3aFiph1eFIeDiEQV8J45u0qfp7ng8I3TzJHY4Eg==" 
         crossorigin="anonymous" 
         referrerpolicy="no-referrer">
 </script>
