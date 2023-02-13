@@ -772,7 +772,7 @@ a:hover {
 .nav-item[data-redirect]::before {
   content: "";
   position: absolute;
-  background-color: black;
+  background-color: #101629;
   top: 15%;
   bottom: 15%;
   width: 1px;

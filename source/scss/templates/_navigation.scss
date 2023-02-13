@@ -89,7 +89,7 @@
 .nav-item[data-redirect]::before {
   content: '';
   position: absolute;
-  background-color: black;
+  background-color: $text-color-dark;
   top: 15%;
   bottom: 15%;
   width: 1px;
