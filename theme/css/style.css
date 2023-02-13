@@ -665,6 +665,20 @@ div.fp-overflow {
   z-index: 1;
 }
 
+.team-member {
+  transition: all 450ms ease;
+  transform: scale(0.9);
+}
+@media (max-width: 767px) {
+  .team-member {
+    transform: scale(1);
+  }
+}
+
+.team-member:is(:hover, :focus) {
+  transform: scale(1);
+}
+
 .custom-cursor {
   display: none;
   position: fixed;

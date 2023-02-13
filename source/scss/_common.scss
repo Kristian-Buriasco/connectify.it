@@ -301,3 +301,16 @@ div.fp-overflow {
 .zindex-1 {
   z-index: 1;
 }
+
+.team-member {
+  transition: all 450ms ease;
+  transform: scale(0.9);
+
+  @include tablet {
+    transform: scale(1);
+  }
+}
+
+.team-member:is(:hover, :focus) {
+  transform: scale(1);
+}

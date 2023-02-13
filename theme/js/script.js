@@ -186,7 +186,7 @@ $.each(sections, (i, section) => {
 
 
 // custom cursor 
-const links = $("a, button, select");
+const links = $("a, button, select, .hoverable");
 const mouse_cursor = $(".custom-cursor");
 
 
