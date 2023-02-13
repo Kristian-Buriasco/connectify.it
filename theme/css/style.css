@@ -735,7 +735,7 @@ a:hover {
   justify-content: center;
 }
 
-.nav-link[href="#"]::after {
+.nav-link[href="#home-anchor"]::after {
   transform: scaleX(1);
 }
 
