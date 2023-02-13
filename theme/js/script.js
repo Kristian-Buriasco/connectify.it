@@ -51,6 +51,7 @@ $(window).on("load", () => {
   new fullpage('#fullpage', {
     //options here
     autoScrolling:true,
+    responsiveWidth: 800
   });
 
 
