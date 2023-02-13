@@ -99,6 +99,13 @@ a:hover {
   background-repeat: no-repeat;
 }
 
+div.fp-overflow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+
 /* overlay */
 
 .overlay {
