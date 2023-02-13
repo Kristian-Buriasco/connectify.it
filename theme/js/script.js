@@ -29,8 +29,9 @@ $(window).on("load", () => {
 
   const navigation_footer = $(".navigation, .footer");
 
+
   [...navigation_footer.find(`a[href^="${page}"]`)].forEach(link => {
-    const href = link.getAttribute("href").replace(page, "") || "#";
+    const href = link.getAttribute("href").replace(page, "");
     link.setAttribute("href", href);
   })
 
