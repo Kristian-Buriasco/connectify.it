@@ -44,18 +44,22 @@ $(window).on("load", () => {
     //options here
     autoScrolling:true,
     responsiveWidth: 800,
-    verticalCentered:true,
+    paddingTop: "150px",
 
-    onLeave: function({index}) {
-      if(index === 0)
+    beforeLeave: function(origin, destination){
+      const index_origin = origin.index;
+      const index_destination = destination.index;
+      const navigation = $(".navigation");
+
+      if(index_origin < index_destination)
       {
-        $(".navigation").addClass("nav-bg");
+        navigation.addClass("nav-bg");
       }
-      else if(index === 1)
+      else if(index_origin === 1 && index_origin > index_destination)
       {
-        $(".navigation").removeClass("nav-bg");
+        navigation.removeClass("nav-bg");
       }
-    }
+  }
   });
 
 
