@@ -459,6 +459,9 @@ a:hover {
 .section-title {
   margin-bottom: 30px;
 }
+.section > * {
+  height: 100%;
+}
 
 .bg-cover {
   background-size: cover;

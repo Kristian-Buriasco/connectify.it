@@ -87,6 +87,10 @@ a:hover {
   &-title {
     margin-bottom: 30px;
   }
+
+  & > * {
+    height: 100%;
+  }
 }
 
 .bg-cover {
