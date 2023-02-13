@@ -19,6 +19,18 @@ body {
   padding: 0;
 }
 
+#fullPage {
+  overflow-x: hidden;
+}
+
+.fp-watermark {
+  display: none;
+}
+
+footer a {
+  margin: 0;
+}
+
 /* preloader */
 
 .preloader {
@@ -69,16 +81,13 @@ a:hover {
   outline: 0;
 }
 
-
 .section {
   padding-top: 100px;
-  
+
   &-title {
-    margin-bottom: 30.000000000px;
+    margin-bottom: 30px;
   }
 }
-
-
 
 .bg-cover {
   background-size: cover;
