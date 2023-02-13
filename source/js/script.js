@@ -183,22 +183,16 @@ links
   })
 
 
-if(!isTouchDevice()) {
-  $(window).on("mousemove", (e) => {
-    const x = e.clientX + "px";
-    const y = e.clientY + "px";
-  
-    mouse_cursor.show();
-  
-    mouse_cursor.css({
-      left: x,
-      top: y
-    })
-  })
-}
 
-function isTouchDevice() {
-  return (('ontouchstart' in window) ||
-    (navigator.maxTouchPoints > 0) ||
-    (navigator.msMaxTouchPoints > 0));
-}
+$(window).on("mousemove", (e) => {
+  const x = e.clientX + "px";
+  const y = e.clientY + "px";
+
+  mouse_cursor.show();
+
+  mouse_cursor.css({
+    left: x,
+    top: y
+  })
+})
+
