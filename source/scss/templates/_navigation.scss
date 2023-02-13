@@ -86,6 +86,8 @@
   transform: scaleX(1);
 }
 
+
+
 .nav-item[data-redirect]::before {
   content: '';
   position: absolute;
@@ -94,4 +96,9 @@
   bottom: 15%;
   width: 1px;
   left: -5%;
+
+  @include desktop {
+    width: 0;
+    height: 0;
+  }
 }

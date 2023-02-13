@@ -781,6 +781,12 @@ a:hover {
   width: 1px;
   left: -5%;
 }
+@media (max-width: 991px) {
+  .nav-item[data-redirect]::before {
+    width: 0;
+    height: 0;
+  }
+}
 
 .hero-section {
   padding-top: 250px;
