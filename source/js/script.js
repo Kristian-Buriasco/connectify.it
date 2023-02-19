@@ -45,6 +45,7 @@ $(window).on("load", () => {
     licenseKey: "gplv3-license",
     autoScrolling:true,
     responsiveWidth: 800,
+    responsiveHeight: 900,
     paddingTop: "150px",
 
     beforeLeave: function(origin, destination){

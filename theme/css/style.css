@@ -710,7 +710,7 @@ div.fp-overflow {
     transform: translate(-50%, -50%) scale(0.5);
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
   }
-  70% {
+  60% {
     transform: translate(-50%, -50%) scale(0.6);
     box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
   }
@@ -1498,6 +1498,10 @@ a {
   .about-bg-6 {
     display: none;
   }
+}
+.about .max-ch-row {
+  max-width: 70ch;
+  margin-inline: auto;
 }
 
 .play-btn {
