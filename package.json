@@ -9,20 +9,21 @@
     "build": "gulp build"
   },
   "dependencies": {
-    "browser-sync": "^2.27.10",
+    "browser-sync": "^2.29.1",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-file-include": "^2.3.0",
-    "gulp-header-comment": "^0.10.0",
     "gulp-jshint": "^2.1.0",
     "gulp-notify": "^4.0.0",
     "gulp-plumber": "^1.2.1",
     "gulp-rimraf": "^1.0.0",
     "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^3.0.0",
-    "gulp-util": "^3.0.8",
-    "jshint": "^2.13.4",
+    "jshint": "^2.13.6",
     "jshint-stylish": "^2.2.1",
-    "sass": "^1.53.0"
+    "sass": "^1.60.0"
+  },
+  "devDependencies": {
+    "yarn-audit-fix": "^9.3.10"
   }
 }

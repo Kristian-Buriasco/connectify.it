@@ -25,8 +25,7 @@ $dot-color: rgb(5, 170, 112);
 $dot-count: 26;
 $dot-size: 10px;
 $dot-space: 15px;
-$dot-start: (
-    ($dot-count / 2 + 1) * ($dot-size + $dot-space)) / 2;
+$dot-start: calc((calc($dot-count / 2 + 1) * ($dot-size + $dot-space)) / 2);
 
 
 $animation-time: 2s;
@@ -48,13 +47,13 @@ $animation-distance: 25px;
     width: $dot-size;
 
     @for $i from 1 through $dot-count {
-        $dot-move: ceil($i / 2);
+        $dot-move: ceil(calc($i / 2));
         $dot-pos: $dot-start - (($dot-size + $dot-space) * $dot-move);
 
         $animation-delay: -#{$i * 0.1}s;
 
         @if $i % 2==0 {
-            $animation-delay: -#{($i * 0.1) + ($animation-time / 2)};
+            $animation-delay: -#{($i * 0.1) + calc($animation-time / 2)};
         }
 
         &:nth-of-type(#{$i}) {
