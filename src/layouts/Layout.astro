@@ -1,0 +1,171 @@
+---
+export interface Props {
+    title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="IT">
+    <head>
+        <meta charset="utf-8" />
+        <title>Connectify || Local Web Developing</title>
+        <meta name="theme-color" content="#8886f7" />
+        <!-- mobile responsive meta -->
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, maximum-scale=5"
+        />
+
+        <!-- theme meta -->
+        <meta
+            name="description"
+            content="Connectify is a local web development company that helps small businesses 
+				connect with the internet and beyond. Contact us for a consultation."
+        />
+        <meta
+            name="keywords"
+            content="local web development, small business, internet, connect, website design, website development"
+        />
+
+        <!-- theme meta -->
+        <meta name="theme-name" content="dtox" />
+        <meta
+            name="description"
+            content="Connectify is a local web development company that helps small businesses connect with the internet and beyond. Contact us for a consultation."
+        />
+        <meta
+            name="keywords"
+            content="local web development, small business, internet, connect, website design, website development"
+        />
+
+        <!-- Open Graph data -->
+        <meta
+            property="og:title"
+            content="Connectify || Local Web Developing"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://connectify.it" />
+        <meta
+            property="og:description"
+            content="Connectify is a local web development company that helps small businesses connect with the internet and beyond. Contact us for a consultation."
+        />
+        <meta
+            property="og:image"
+            content="https://connectify.it/images/og-image.jpg"
+        />
+
+        <!-- Twitter card data -->
+        <meta name="twitter:card" content="summary" />
+        <meta
+            name="twitter:title"
+            content="Connectify || Local Web Developing"
+        />
+        <meta
+            name="twitter:description"
+            content="Connectify is a local web development company that helps small businesses connect with the internet and beyond. Contact us for a consultation."
+        />
+        <meta
+            name="twitter:image"
+            content="https://connectify.it/images/twitter-card-image.jpg"
+        />
+
+        <!-- Robots Meta tag -->
+        <meta name="robots" content="index, follow" />
+
+        <!-- search engine verfication tag -->
+        <meta
+            name="google-site-verification"
+            content="your-google-verification-code-here"
+        />
+        <meta
+            name="bing-site-verification"
+            content="your-bing-verification-code-here"
+        />
+
+        <!-- Canonical URL -->
+        <link rel="canonical" href="https://connectify.it" />
+
+        <!-- Robots Meta tag -->
+        <meta name="robots" content="index, follow" />
+
+        <!-- search engine verfication tag -->
+        <meta
+            name="google-site-verification"
+            content="your-google-verification-code-here"
+        />
+        <meta
+            name="bing-site-verification"
+            content="your-bing-verification-code-here"
+        />
+
+        <!-- Canonical URL -->
+        <link rel="canonical" href="https://connectify.it" />
+
+        <!-- ** Plugins Needed for the Project ** -->
+        <!-- Bootstrap 5.3-->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+            crossorigin="anonymous"
+        />
+
+        <!-- themefy-icon -->
+        <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css" />
+
+        <!-- slick slider -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+            integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+
+        <!-- fullpage css -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.15/fullpage.min.css"
+            integrity="sha512-FKlWnaJrtBEqH+gNy8kvp+/61S+8iOKb5tG+EKCQ3Fc3iUYr9MvnywpkZBcuNKrxQxlnZYpNwDgkZ2atX7wVVg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+
+        <!-- Main Stylesheet -->
+        <link href="css/style.css" rel="stylesheet" />
+
+        <!--Favicon-->
+        <link
+            rel="shortcut icon"
+            href="images/favicon.ico"
+            type="image/x-icon"
+        />
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    </head>
+    <body>
+        <slot />
+    </body>
+</html>
+<style is:global>
+    :root {
+        --accent: 124, 58, 237;
+        --accent-gradient: linear-gradient(
+            45deg,
+            rgb(var(--accent)),
+            #da62c4 30%,
+            white 60%
+        );
+    }
+    html {
+        font-family: system-ui, sans-serif;
+        background-color: #f6f6f6;
+    }
+    code {
+        font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
+            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+    }
+</style>
+
