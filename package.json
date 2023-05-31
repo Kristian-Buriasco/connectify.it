@@ -1,29 +1,16 @@
 {
-  "name": "connectify",
-  "version": "1.0.0",
-  "description": "Connectify is a local web development company that helps small businesses connect with the internet and beyond. Contact us for a consultation.",
-  "author": "Connectify",
-  "license": "MIT",
+  "name": "",
+  "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "dev": "gulp",
-    "build": "gulp build"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "dependencies": {
-    "browser-sync": "^2.29.1",
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^8.0.0",
-    "gulp-file-include": "^2.3.0",
-    "gulp-jshint": "^2.1.0",
-    "gulp-notify": "^4.0.0",
-    "gulp-plumber": "^1.2.1",
-    "gulp-rimraf": "^1.0.0",
-    "gulp-sass": "^5.1.0",
-    "gulp-sourcemaps": "^3.0.0",
-    "jshint": "^2.13.6",
-    "jshint-stylish": "^2.2.1",
-    "sass": "^1.60.0"
-  },
-  "devDependencies": {
-    "yarn-audit-fix": "^9.3.10"
+    "astro": "^2.5.6",
+    "sass": "^1.62.1"
   }
 }
