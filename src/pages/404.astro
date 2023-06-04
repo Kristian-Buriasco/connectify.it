@@ -1,0 +1,276 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+import HeroBg from "../images/hero-area/banner-bg.webp";
+const styles = `background-image: url(${HeroBg})`;
+
+import BgScene1 from "../images/background-shape/feature-bg-1.webp";
+import BgScene2 from "../images/background-shape/feature-bg-2.webp";
+import HalfCircle from "../images/background-shape/seo-half-cycle.webp";
+import GreenDot from "../images/background-shape/green-dot.webp";
+import BlueHalfCircle from "../images/background-shape/blue-half-cycle.webp";
+import SeoBall from "../images/background-shape/seo-ball-1.webp";
+import YellowTriangle from "../images/background-shape/yellow-triangle.webp";
+import ServiceHalfCycle from "../images/background-shape/service-half-cycle.webp";
+import TeamBgTriangle from "../images/background-shape/team-bg-triangle.webp";
+---
+
+<Layout>
+    <section
+    class="section not-found 404"
+    style={styles}>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center zindex-1">
+                    <h1 class="mb-3">
+                        <code>404</code> <b>Not Found</b> <br>
+                        Pagina non trovata
+                    </h1>
+                    <a href="/"  class="btn btn-info btn-lg">
+                        Torna alla home
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- background shapes -->
+        <div id="scene">
+            <img
+                class="img-fluid not-found-bg-1 up-down-animation"
+                src={BgScene1}
+                alt=""
+            />
+            <img
+                class="img-fluid not-found-bg-2 left-right-animation"
+                src={BgScene2}
+                alt=""
+            />
+            <img
+                class="img-fluid not-found-bg-3 left-right-animation"
+                src={HalfCircle}
+                alt=""
+            />
+            <img
+                class="img-fluid not-found-bg-4 up-down-animation"
+                src={GreenDot}
+                alt=""
+            />
+            <img
+                class="img-fluid not-found-bg-5 left-right-animation"
+                src={BlueHalfCircle}
+                alt=""
+            />
+            <img
+                class="img-fluid not-found-bg-6 up-down-animation"
+                src={SeoBall}
+                alt=""
+            />
+            <img
+                class="img-fluid not-found-bg-7 left-right-animation"
+                src={YellowTriangle}
+                alt=""
+            />
+            <img
+                class="img-fluid not-found-bg-8 up-down-animation"
+                src={ServiceHalfCycle}
+                alt=""
+            />
+            <img
+                class="img-fluid not-found-bg-9 up-down-animation"
+                src={TeamBgTriangle}
+                alt=""
+            />
+        </div>
+    </section>
+</Layout>
+
+
+<script type="text/javascript">
+    window.addEventListener("beforeunload", () => {
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "instant",
+    });
+});
+
+$(window).on("load", () => {
+    document.documentElement.style.height = "";
+    document.documentElement.style.overflowY = "";
+    document.body.style.height = "";
+    document.body.style.overflowY = "";
+})
+
+// custom cursor 
+const links = $("a, button, select, .hoverable");
+const mouse_cursor = $(".custom-cursor");
+
+links
+    .on("mouseover", () => {
+        mouse_cursor.addClass("custom-cursor-hover");
+    })
+    .on("mouseout", () => {
+        mouse_cursor.removeClass("custom-cursor-hover");
+    })
+
+
+$(window).on("mousemove", (e) => {
+    const x = e.clientX + "px";
+    const y = e.clientY + "px";
+
+    mouse_cursor.show();
+
+    mouse_cursor.css({
+        left: x,
+        top: y
+    })
+})
+
+// to remove cursor on mobile
+$(window).on("touchend", (e) => {
+    const { target } = e;
+
+    target.focus();
+    target.click();
+
+    mouse_cursor.hide();
+    
+    e.preventDefault();
+})
+</script>
+
+
+
+<style lang="scss">
+@import "../styles/variables.scss";
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.banner-image {
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+.not-found {
+    padding-top: 250px;
+    padding-bottom: 250px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    margin-bottom: 300px;
+    z-index: 0;
+    position: relative;
+
+    & img {
+    z-index: -1;
+    }
+
+    &-bg-1 {
+        position: absolute;
+        left: 30px;
+        top: 200px;
+
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &-bg-2 {
+        position: absolute;
+        top: 50%;
+        left: 20%;
+
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &-bg-3 {
+        position: absolute;
+        bottom: 0%;
+        left: 10%;
+
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &-bg-4 {
+        top: 210px;
+        right: 40%;
+        position: absolute;
+
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &-bg-5 {
+        position: absolute;
+        top: 250px;
+        right: 17%;
+
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &-bg-6 {
+        position: absolute;
+        right: 10%;
+        bottom: 20%;
+
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &-bg-7 {
+        position: absolute;
+        left: 20%;
+        bottom: -17%;
+        z-index: 1;
+
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &-bg-8 {
+        position: absolute;
+        bottom: -30%;
+        right: 50%;
+        z-index: 1;
+
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &-bg-9 {
+        position: absolute;
+        right: 20%;
+        bottom: -10%;
+        z-index: 1;
+
+        @include tablet {
+            display: none;
+        }
+    }
+
+    & h1 {
+        z-index: 10;
+    }
+}
+
+a{
+    margin: 10px;
+}
+        
+</style>

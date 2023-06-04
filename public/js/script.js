@@ -1,0 +1,157 @@
+
+window.addEventListener("beforeunload", () => {
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "instant",
+    });
+});
+
+$(window).on("load", () => {
+    document.documentElement.style.height = "";
+    document.documentElement.style.overflowY = "";
+    document.body.style.height = "";
+    document.body.style.overflowY = "";
+})
+
+if(document.getElementById("fullpage"))
+{
+    new fullpage('#fullpage', {
+        //options here
+        licenseKey: "gplv3-license",
+        autoScrolling:true,
+        responsiveWidth: 800,
+        responsiveHeight: 900,
+        paddingTop: "150px",
+
+        beforeLeave: function(origin, destination){
+        const { index: index_origin } = origin;
+        const { index: index_destination } = destination;
+
+        const navigation = $(".navigation");
+
+        if(index_origin < index_destination)
+        {
+            navigation.addClass("nav-bg");
+        }
+        else if (index_destination === 0)
+        {
+            navigation.removeClass("nav-bg");
+        }
+        }
+    });
+}
+
+// close the navbar on click of a link
+$('.navbar-nav li a').on('click', function(){
+    $('.navbar-collapse').collapse('hide');
+});
+
+// section observer 
+const sections =  $(`section[class^="section"] div[class^="container"]`);
+const scaling = 0.8;
+
+sections.css({
+    "transform": `scale(${scaling})`,
+    "transition": "350ms ease"
+});
+
+const sectionObserverOptions = {
+    threshold: 0,
+    rootMargin: "0px 0px -300px 0px",
+};
+
+const sectionObserver = new IntersectionObserver((entries, sectionObserver) => {
+    entries.forEach((entry) => {
+        const section = $(entry.target);
+
+        if(!entry.isIntersecting)
+        {
+        section.css("transform",`scale(${scaling})`);
+        return;
+        }
+
+        section.css("transform", "scale(1)");
+    });
+}, sectionObserverOptions);
+
+
+
+$.each(sections, (i, section) => {
+    sectionObserver.observe(section);
+});
+
+// custom cursor 
+const links = $("a, button, select, .hoverable");
+const mouse_cursor = $(".custom-cursor");
+
+links
+    .on("mouseover", () => {
+        mouse_cursor.addClass("custom-cursor-hover");
+    })
+    .on("mouseout", () => {
+        mouse_cursor.removeClass("custom-cursor-hover");
+    })
+
+
+$(window).on("mousemove", (e) => {
+    const x = e.clientX + "px";
+    const y = e.clientY + "px";
+
+    mouse_cursor.show();
+
+    mouse_cursor.css({
+        left: x,
+        top: y
+    })
+})
+
+// to remove cursor on mobile
+$(window).on("touchend", (e) => {
+    const { target } = e;
+
+    target.focus();
+    target.click();
+
+    mouse_cursor.hide();
+    
+    e.preventDefault();
+})
+
+$(".team-slider").slick({
+    dots: false,
+    infinite: false,
+    speed: 1000,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: true,
+    prevArrow:
+        "<button type='button' class='prevArrow' aria-label='Previous'><i class='ti-arrow-left'></i></button>",
+    nextArrow:
+        "<button type='button' class='nextArrow' aria-label='Next'><i class='ti-arrow-right'></i></button>",
+    responsive: [
+        {
+        breakpoint: 1024,
+        settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+        },
+        },
+        {
+        breakpoint: 991,
+        settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+        },
+        },
+        {
+        breakpoint: 767,
+        settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+        },
+        },
+    ],
+});

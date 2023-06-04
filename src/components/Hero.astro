@@ -1,0 +1,215 @@
+---
+import HeroBg from "../images/hero-area/banner-bg.webp";
+const style = `background-image: url("${HeroBg}")`;
+
+import BgScene1 from "../images/background-shape/feature-bg-1.webp";
+import BgScene2 from "../images/background-shape/feature-bg-2.webp";
+import HalfCircle from "../images/background-shape/seo-half-cycle.webp";
+import GreenDot from "../images/background-shape/green-dot.webp";
+import BlueHalfCircle from "../images/background-shape/blue-half-cycle.webp";
+import SeoBall from "../images/background-shape/seo-ball-1.webp";
+import YellowTriangle from "../images/background-shape/yellow-triangle.webp";
+import ServiceHalfCycle from "../images/background-shape/service-half-cycle.webp";
+import TeamBgTriangle from "../images/background-shape/team-bg-triangle.webp";
+---
+
+<section
+    class="section p-auto-width-responsive fp-auto-height-responsive hero-section hero" 
+    data-anchor="home-anchor"
+    data-background=""
+    style={style}>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center zindex-1">
+                <h1 class="mb-3">
+                    Prendi Il controllo<br />
+                    Della tua presenza sul Web
+                </h1>
+                <a href="#about-anchor" class="page-scroll  btn btn-info btn-lg"
+                    >Su di Noi</a
+                >
+                <a href="contact.html" class="btn btn-dark btn-lg">Contattaci</a>
+            </div>
+        </div>
+    </div>
+    <!-- background shapes -->
+    <div id="scene">
+        <img
+            class="img-fluid hero-bg-1 up-down-animation"
+            src={BgScene1}
+            alt=""
+        />
+        <img
+            class="img-fluid hero-bg-2 left-right-animation"
+            src={BgScene2}
+            alt=""
+        />
+        <img
+            class="img-fluid hero-bg-3 left-right-animation"
+            src={HalfCircle}
+            alt=""
+        />
+        <img
+            class="img-fluid hero-bg-4 up-down-animation"
+            src={GreenDot}
+            alt=""
+        />
+        <img
+            class="img-fluid hero-bg-5 left-right-animation"
+            src={BlueHalfCircle}
+            alt=""
+        />
+        <img
+            class="img-fluid hero-bg-6 up-down-animation"
+            src={SeoBall}
+            alt=""
+        />
+        <img
+            class="img-fluid hero-bg-7 left-right-animation"
+            src={YellowTriangle}
+            alt=""
+        />
+        <img
+            class="img-fluid hero-bg-8 up-down-animation"
+            src={ServiceHalfCycle}
+            alt=""
+        />
+        <img
+            class="img-fluid hero-bg-9 up-down-animation"
+            src={TeamBgTriangle}
+            alt=""
+        />
+    </div>
+</section>
+
+<style lang="scss">
+@import "../styles/variables.scss";
+
+.hero-section {
+    padding-top: 250px;
+    padding-bottom: 250px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    margin-bottom: 300px;
+    z-index: -1;
+}
+
+.banner-image {
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.hero {
+    position: relative;
+
+    & img {
+    z-index: -1;
+    }
+
+    &-bg-1 {
+        position: absolute;
+        left: 30px;
+        top: 200px;
+
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &-bg-2 {
+        position: absolute;
+        top: 50%;
+        left: 20%;
+
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &-bg-3 {
+        position: absolute;
+        bottom: 0%;
+        left: 10%;
+
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &-bg-4 {
+        top: 210px;
+        right: 40%;
+        position: absolute;
+
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &-bg-5 {
+        position: absolute;
+        top: 250px;
+        right: 17%;
+
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &-bg-6 {
+        position: absolute;
+        right: 10%;
+        bottom: 20%;
+
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &-bg-7 {
+        position: absolute;
+        left: 20%;
+        bottom: -17%;
+        z-index: 1;
+
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &-bg-8 {
+        position: absolute;
+        bottom: -30%;
+        right: 50%;
+        z-index: 1;
+
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &-bg-9 {
+        position: absolute;
+        right: 20%;
+        bottom: -10%;
+        z-index: 1;
+
+        @include tablet {
+            display: none;
+        }
+    }
+
+    & h1 {
+        z-index: 10;
+    }
+
+}
+
+a{
+    margin: 10px;
+}
+        
+</style>
