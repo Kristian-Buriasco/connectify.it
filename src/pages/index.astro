@@ -30,3 +30,73 @@ import Footer from '../components/Footer.astro';
 		<Footer />
 	</div>
 </Layout>
+
+<script type="text/javascript">
+
+	document.addEventListener("DOMContentLoaded", () => {
+		console.log(":)");
+		if(!document.getElementById("fullpage"))
+		{
+			return;
+		}
+
+		new fullpage('#fullpage', {
+			//options here
+			licenseKey: "gplv3-license",
+			autoScrolling: true,
+			responsiveWidth: 800,
+			responsiveHeight: 900,
+
+
+			beforeLeave: function(origin, destination){
+				const { index: index_origin } = origin;
+				const { index: index_destination } = destination;
+
+				const navigation = $(".navigation");
+
+				if(index_origin < index_destination)
+				{
+					navigation.addClass("nav-bg");
+				}
+				else if (index_destination === 0)
+				{
+					navigation.removeClass("nav-bg");
+				}
+			}
+		});
+	});
+
+	// section observer 
+	const sections =  $(`section[class^="section"] div[class^="container"]`);
+	const scaling = 0.8;
+
+	sections.css({
+		"transform": `scale(${scaling})`,
+		"transition": "350ms ease"
+	});
+
+	const sectionObserverOptions = {
+		threshold: 0,
+		rootMargin: "0px 0px -300px 0px",
+	};
+
+	const sectionObserver = new IntersectionObserver((entries, sectionObserver) => {
+		entries.forEach((entry) => {
+			const section = $(entry.target);
+
+			if(!entry.isIntersecting)
+			{
+				section.css("transform",`scale(${scaling})`);
+				return;
+			}
+
+			section.css("transform", "scale(1)");
+		});
+	}, sectionObserverOptions);
+
+
+
+	$.each(sections, (i, section) => {
+		sectionObserver.observe(section);
+	});
+</script>

@@ -5,7 +5,7 @@ import FeatureBg2 from "../images/background-shape/feature-bg-2.webp";
 
 ---
 
-<section class="section p-auto-width-responsive fp-auto-height-responsive feature mb-0" id="feature" data-anchor="feature-anchor">
+<section class="section fp-auto-width fp-auto-height feature mb-0" id="feature" data-anchor="feature-anchor">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
@@ -173,5 +173,34 @@ import FeatureBg2 from "../images/background-shape/feature-bg-2.webp";
             display: none;
         }
     }
+}
+
+.feature-item:is(:hover, :focus) .feature-icon {
+    transition: 350ms;
+    transform: scale(1.125);
+}
+
+.feature-item h4 {
+    position: relative;
+    width: max-content;
+}
+
+.feature-item h4::after {
+    content: "";
+    position: absolute;
+
+    top: 117%;
+    left: 0;
+    width: 100%;
+
+    background-color: #000;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: 350ms;
+}
+
+.feature-item:is(:hover, :focus) h4::after {
+    transform: scaleX(1);
 }
 </style>

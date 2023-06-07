@@ -29,10 +29,23 @@
     </div>
 </div>
 
-<script>
+<script type="text/javascript">
 	document.addEventListener("DOMContentLoaded", () => {
 		document.getElementsByClassName("loader-wrapper")[0].remove();
+
+        document.documentElement.style.height = "";
+        document.documentElement.style.overflowY = "";
+        document.body.style.height = "";
+        document.body.style.overflowY = "";
 	})
+
+    window.addEventListener("beforeunload", () => {
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: "instant",
+        });
+    });
 </script>
 
 <style lang="scss">

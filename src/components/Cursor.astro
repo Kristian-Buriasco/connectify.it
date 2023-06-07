@@ -1,6 +1,43 @@
 
 <div class="custom-cursor"></div>
 
+<script type="text/javascript" is:inline>
+    const mouse_cursor = document.querySelector(".custom-cursor");
+
+    window.addEventListener("mousemove", ({clientX, clientY}) => {
+        const x = clientX + "px";
+        const y = clientY + "px";
+
+        mouse_cursor.style.display = "block";
+        mouse_cursor.style.left = x;
+        mouse_cursor.style.top = y;
+    });
+
+    // to remove cursor on mobile
+    window.addEventListener("touchend", ({target}) => {
+        target.focus();
+        target.click();
+
+        mouse_cursor.style.display = "none";
+        
+        e.preventDefault();
+    })
+
+    document.addEventListener("DOMContentLoaded", () => {
+        // custom cursor 
+        const links = [...document.querySelectorAll("a, button, .btn, select, .hoverable")];
+
+
+        links.forEach(link => link.addEventListener("mouseover", () => {
+            mouse_cursor.classList.add("custom-cursor-hover");
+        }));
+
+        links.forEach(link => link.addEventListener("mouseout", () => {
+            mouse_cursor.classList.remove("custom-cursor-hover");
+        }));
+    })
+</script>
+
 
 <style lang="scss">
 .custom-cursor {
@@ -30,6 +67,24 @@
     animation-name: pulse;
     animation-duration: 2s;
     animation-iteration-count: infinite;
+}
+
+
+@keyframes pulse {
+    10% {
+        transform: translate(-50%, -50%) scale(0.5);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+    }
+    
+    60% {
+        transform: translate(-50%, -50%) scale(0.6);
+        box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+    }
+    
+    100% {
+        transform: translate(-50%, -50%) scale(0.5);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
 }
 
 </style>

@@ -1,8 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
+import "../js/fullpage.js";
+
 import Navigation from '../components/Navigation.astro';
-import Contact from '../components/Contact.astro';
+import ContactPage from '../components/Contact.astro';
 import Footer from '../components/Footer.astro';
 ---
 
@@ -10,8 +12,43 @@ import Footer from '../components/Footer.astro';
 	<Navigation />
 
 	<div id="fullpage">
-        <Contact />
+        <ContactPage />
 
         <Footer />
 	</div>
 </Layout>
+
+
+<script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", () => {
+        if(!document.getElementById("fullpage"))
+        {
+            return;
+        }
+
+        new fullpage('#fullpage', {
+            //options here
+            licenseKey: "gplv3-license",
+            autoScrolling: true,
+            responsiveWidth: 800,
+            responsiveHeight: 900,
+
+
+            beforeLeave: function(origin, destination){
+                const { index: index_origin } = origin;
+                const { index: index_destination } = destination;
+
+                const navigation = $(".navigation");
+
+                if(index_origin < index_destination)
+                {
+                    navigation.addClass("nav-bg");
+                }
+                else if (index_destination === 0)
+                {
+                    navigation.removeClass("nav-bg");
+                }
+            }
+        });
+    })
+</script>

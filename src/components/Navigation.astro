@@ -27,30 +27,30 @@ import Logo from "../images/logo.webp";
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav nav-bg rounded-20">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html#home-anchor"
+                        <a class="nav-link" href="/#home-anchor"
                             >Home</a
                         >
                     </li>
                     <li class="nav-item">
                         <a
                             class="nav-link page-scroll"
-                            href="index.html#feature-anchor">Servizi</a
+                            href="/#feature-anchor">Servizi</a
                         >
                     </li>
                     <li class="nav-item">
                         <a
                             class="nav-link page-scroll"
-                            href="index.html#about-anchor">Su di Noi</a
+                            href="/#about-anchor">Su di Noi</a
                         >
                     </li>
                     <li class="nav-item">
                         <a
                             class="nav-link page-scroll"
-                            href="index.html#team-anchor">Team</a
+                            href="/#team-anchor">Team</a
                         >
                     </li>
                     <li class="nav-item" data-redirect>
-                        <a class="nav-link" href="contact.html#home-anchor"
+                        <a class="nav-link" href="/contact/#home-anchor"
                             >Contattaci</a
                         >
                     </li>
@@ -71,8 +71,15 @@ import Logo from "../images/logo.webp";
         [...nav.find(`a[href^="${page}"]`)].forEach(link => {
             const href = link.getAttribute("href").replace(page, "");
             link.setAttribute("href", href);
-        })
+        });
+
+        // close the navbar on click of a link
+        $('.navbar-nav li a').on('click', function(){
+            $('.navbar-collapse').collapse('hide');
+        });
     });
+
+    
 </script>
 
 <style lang="scss">

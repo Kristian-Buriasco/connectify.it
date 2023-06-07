@@ -92,6 +92,48 @@ import TeamBgDots from "../images/background-shape/team-bg-dots.webp";
     <img class="team-bg-shape-4 up-down-animation img-fluid" src={TeamBgDots} alt="background-shape">
 </section>
 
+<script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", () => {
+        $(".team-slider").slick({
+            dots: false,
+            infinite: false,
+            speed: 1000,
+            autoplay: true,
+            autoplaySpeed: 5000,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            arrows: true,
+            prevArrow:
+                "<button type='button' class='prevArrow' aria-label='Previous'><i class='ti-arrow-left'></i></button>",
+            nextArrow:
+                "<button type='button' class='nextArrow' aria-label='Next'><i class='ti-arrow-right'></i></button>",
+            responsive: [
+                {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                },
+                },
+                {
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                },
+                },
+                {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                },
+                },
+            ],
+        });
+    });
+</script>
+
 
 <style lang="scss">
 @import "../styles/variables.scss";
