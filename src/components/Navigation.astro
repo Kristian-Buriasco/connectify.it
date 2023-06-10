@@ -71,7 +71,7 @@ import Logo from "../images/logo.webp";
         [...nav.find(`a[href^="${page}"]`)].forEach(link => {
             const href = link.getAttribute("href").replace(page, "");
             link.setAttribute("href", href);
-        });
+        })
 
         // close the navbar on click of a link
         $('.navbar-nav li a').on('click', function(){
