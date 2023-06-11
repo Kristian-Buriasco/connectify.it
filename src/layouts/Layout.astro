@@ -2,6 +2,8 @@
 import "../styles/base.scss";
 import Loader from '../components/Loader.astro';
 import Cursor from '../components/Cursor.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <!DOCTYPE html>
@@ -132,9 +134,17 @@ import Cursor from '../components/Cursor.astro';
     </head>
     <body style="heigth: 100%; overflow-y: hidden;">
         <Cursor />
+        
         <Loader />
 
-        <slot />
+        <Navigation />
+
+        <div id="fullpage">
+
+            <slot />
+
+            <Footer />
+        </div>
 
         <!-- External scripts -->
         <!-- jQuery -->
@@ -168,3 +178,42 @@ import Cursor from '../components/Cursor.astro';
         </script>
     </body>
 </html>
+
+
+<script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", () => {
+        InitFullpage();
+    });
+
+    function InitFullpage() {
+        if(!document.getElementById("fullpage"))
+        {
+            return;
+        }
+
+        new fullpage('#fullpage', {
+            //options here
+            licenseKey: "gplv3-license",
+            autoScrolling: true,
+            responsiveWidth: 800,
+            responsiveHeight: 900,
+
+
+            beforeLeave: function(origin, destination){
+                const { index: index_origin } = origin;
+                const { index: index_destination } = destination;
+
+                const navigation = $(".navigation");
+
+                if(index_origin < index_destination)
+                {
+                    navigation.addClass("nav-bg");
+                }
+                else if (index_destination === 0)
+                {
+                    navigation.removeClass("nav-bg");
+                }
+            }
+        });
+    }
+</script>

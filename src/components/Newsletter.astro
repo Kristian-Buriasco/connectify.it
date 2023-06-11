@@ -2,7 +2,7 @@
 import SeoBall2 from "../images/background-shape/seo-ball-2.webp";
 ---
 
-<section class="section fp-auto-height newsletter">
+<section class="section fp-auto-height newsletter" data-anchor="newsletter-anchor">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
@@ -28,84 +28,83 @@ import SeoBall2 from "../images/background-shape/seo-ball-2.webp";
 
 
 <style lang="scss">
-@import "../styles/variables.scss";
+    @import "../styles/variables.scss";
 
-.newsletter {
-    position: relative;
+    .newsletter {
+        position: relative;
 
-    &-form {
-        height: 85px;
-        width: 100%;
-        padding: 0 40px;
-        border: 0;
-        background: $white;
-        box-shadow: $primary-shadow;
-        border-radius: 5px;
-
-        &:focus {
-        outline: 0;
-        box-shadow: 0;
-        }
-    }
-
-    &-btn {
-        position: absolute;
-        height: 100%;
-        background: #8986ff;
-        top: 0;
-        right: 0;
-        border-radius: 0 5px 5px 0;
-        font-weight: 700;
-        font-size: 18px;
-        color: $white;
-        text-transform: uppercase;
-
-        @include mobile {
-        padding-left: 5px;
-        padding-right: 5px;
-
-        }
-    }
-
-    &-bg-shape {
-        position: absolute;
-        top: 0;
-        right: 10%;
-        z-index: -1;
-        @include tablet {
-        display: none;
-        }
-    }
-}
-
-.social-icon {
-    li {
-        margin: 0 12px;
-
-        a {
-            height: 45px;
-            width: 45px;
+        &-form {
+            height: 85px;
+            width: 100%;
+            padding: 0 40px;
+            border: 0;
             background: $white;
+            box-shadow: $primary-shadow;
             border-radius: 5px;
-            line-height: 45px;
-            display: block;
-            text-align: center;
+
+            &:focus {
+            outline: 0;
+            box-shadow: 0;
+            }
         }
-    }
-}
 
-.client-logo-slider {
-    img {
-        transition: .2s ease;
-    }
+        &-btn {
+            position: absolute;
+            height: 100%;
+            background: #8986ff;
+            top: 0;
+            right: 0;
+            border-radius: 0 5px 5px 0;
+            font-weight: 700;
+            font-size: 18px;
+            color: $white;
+            text-transform: uppercase;
 
-    a {
-        &:hover {
-            img {
-                transform: scale(1.2);
+            @include mobile {
+            padding-left: 5px;
+            padding-right: 5px;
+
+            }
+        }
+
+        &-bg-shape {
+            position: absolute;
+            top: 0;
+            right: 10%;
+            z-index: -1;
+            @include tablet {
+            display: none;
             }
         }
     }
-}
 
+    .social-icon {
+        li {
+            margin: 0 12px;
+
+            a {
+                height: 45px;
+                width: 45px;
+                background: $white;
+                border-radius: 5px;
+                line-height: 45px;
+                display: block;
+                text-align: center;
+            }
+        }
+    }
+
+    .client-logo-slider {
+        img {
+            transition: .2s ease;
+        }
+
+        a {
+            &:hover {
+                img {
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
 </style>

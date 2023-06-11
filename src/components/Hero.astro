@@ -27,7 +27,7 @@ import TeamBgTriangle from "../images/background-shape/team-bg-triangle.webp";
                 <a href="#about-anchor" class="page-scroll  btn btn-info btn-lg"
                     >Su di Noi</a
                 >
-                <a href="contact.html" class="btn btn-dark btn-lg">Contattaci</a>
+                <a href="/contact/" class="btn btn-dark btn-lg">Contattaci</a>
             </div>
         </div>
     </div>
@@ -82,134 +82,133 @@ import TeamBgTriangle from "../images/background-shape/team-bg-triangle.webp";
 </section>
 
 <style lang="scss">
-@import "../styles/variables.scss";
+    @import "../styles/variables.scss";
 
-.hero-section {
-    height: auto;
-    padding-top: 250px;
-    padding-bottom: 250px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom center;
-    margin-bottom: 300px;
-    z-index: 0;
-}
-
-.banner-image {
-    position: absolute;
-    top: 110%;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.hero {
-    position: relative;
-
-    & img {
-        z-index: -1;
+    .hero-section {
+        height: auto;
+        padding-top: 250px;
+        padding-bottom: 250px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom center;
+        margin-bottom: 300px;
+        z-index: 0;
     }
 
-    &-bg-1 {
+    .banner-image {
         position: absolute;
-        left: 30px;
-        top: 200px;
+        top: 110%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 
-        @include tablet {
-            display: none;
+    .hero {
+        position: relative;
+
+        & img {
+            z-index: -1;
         }
-    }
 
-    &-bg-2 {
-        position: absolute;
-        top: 50%;
-        left: 20%;
+        &-bg-1 {
+            position: absolute;
+            left: 30px;
+            top: 200px;
 
-        @include tablet {
-            display: none;
+            @include tablet {
+                display: none;
+            }
         }
-    }
 
-    &-bg-3 {
-        position: absolute;
-        bottom: 0%;
-        left: 10%;
+        &-bg-2 {
+            position: absolute;
+            top: 50%;
+            left: 20%;
 
-        @include tablet {
-            display: none;
+            @include tablet {
+                display: none;
+            }
         }
-    }
 
-    &-bg-4 {
-        top: 210px;
-        right: 40%;
-        position: absolute;
+        &-bg-3 {
+            position: absolute;
+            bottom: 0%;
+            left: 10%;
 
-        @include tablet {
-            display: none;
+            @include tablet {
+                display: none;
+            }
         }
-    }
 
-    &-bg-5 {
-        position: absolute;
-        top: 250px;
-        right: 17%;
+        &-bg-4 {
+            top: 210px;
+            right: 40%;
+            position: absolute;
 
-        @include tablet {
-            display: none;
+            @include tablet {
+                display: none;
+            }
         }
-    }
 
-    &-bg-6 {
-        position: absolute;
-        right: 10%;
-        bottom: 20%;
+        &-bg-5 {
+            position: absolute;
+            top: 250px;
+            right: 17%;
 
-        @include tablet {
-            display: none;
+            @include tablet {
+                display: none;
+            }
         }
-    }
 
-    &-bg-7 {
-        position: absolute;
-        left: 20%;
-        bottom: -17%;
-        z-index: 1;
+        &-bg-6 {
+            position: absolute;
+            right: 10%;
+            bottom: 20%;
 
-        @include tablet {
-            display: none;
+            @include tablet {
+                display: none;
+            }
         }
-    }
 
-    &-bg-8 {
-        position: absolute;
-        bottom: -30%;
-        right: 50%;
-        z-index: 1;
+        &-bg-7 {
+            position: absolute;
+            left: 20%;
+            bottom: -17%;
+            z-index: 1;
 
-        @include tablet {
-            display: none;
+            @include tablet {
+                display: none;
+            }
         }
-    }
 
-    &-bg-9 {
-        position: absolute;
-        right: 20%;
-        bottom: -10%;
-        z-index: 1;
+        &-bg-8 {
+            position: absolute;
+            bottom: -30%;
+            right: 50%;
+            z-index: 1;
 
-        @include tablet {
-            display: none;
+            @include tablet {
+                display: none;
+            }
         }
+
+        &-bg-9 {
+            position: absolute;
+            right: 20%;
+            bottom: -10%;
+            z-index: 1;
+
+            @include tablet {
+                display: none;
+            }
+        }
+
+        & h1 {
+            z-index: 10;
+        }
+
     }
 
-    & h1 {
-        z-index: 10;
-    }
-
-}
-
-a{
-    margin: 10px;
-}
-        
+    a{
+        margin: 10px;
+    }    
 </style>

@@ -5,7 +5,7 @@ import Logo from "../images/logo.webp";
 <section class="fixed-top navigation">
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" href="/">
                 <img
                     src={Logo}
                     alt="logo"
@@ -49,6 +49,12 @@ import Logo from "../images/logo.webp";
                             href="/#team-anchor">Team</a
                         >
                     </li>
+                    <li class="nav-item">
+                        <a
+                            class="nav-link page-scroll"
+                            href="/#vision-anchor">La nostra visione</a
+                        >
+                    </li>
                     <li class="nav-item" data-redirect>
                         <a class="nav-link" href="/contact/#home-anchor"
                             >Contattaci</a
@@ -62,16 +68,7 @@ import Logo from "../images/logo.webp";
 
 <script type="text/javascript" >
     document.addEventListener("DOMContentLoaded", () =>{
-        const pagename = window.location.pathname.split("/").at(-1) || "index.html";
-
-        const page = pagename.endsWith(".html") ? pagename : pagename + ".html";
-
-        const nav = $(".navigation");
-
-        [...nav.find(`a[href^="${page}"]`)].forEach(link => {
-            const href = link.getAttribute("href").replace(page, "");
-            link.setAttribute("href", href);
-        })
+        SetActivePageNavbarLi();
 
         // close the navbar on click of a link
         $('.navbar-nav li a').on('click', function(){
@@ -79,114 +76,128 @@ import Logo from "../images/logo.webp";
         });
     });
 
-    
+    function SetActivePageNavbarLi()
+    {
+        const pagename = window.location.pathname.substring(window.location.pathname.indexOf("/")) || "index";
+        const page = pagename;
+
+        console.log(pagename, page);
+
+        const nav = $(".navigation");
+
+        const links = [...nav.find(`a[href^="${page}"]`)];
+
+        links.forEach(link => {
+            const href = link.getAttribute("href").replace(page, "");
+            link.setAttribute("href", href);
+        })
+    }
 </script>
 
 <style lang="scss">
-@import "../styles/variables.scss";
-.nabar-light .navbar-nav .nav-link {
-    color: $text-color-dark;
-}
+    @import "../styles/variables.scss";
+    .nabar-light .navbar-nav .nav-link {
+        color: $text-color-dark;
+    }
 
-.navigation {
-    transition: .3s ease;
-}
+    .navigation {
+        transition: .3s ease;
+    }
 
-.navbar {
-    transition: .3s ease;
-    &-collapse{
-        @include desktop {
-            padding-bottom: 20px;
+    .navbar {
+        transition: .3s ease;
+        &-collapse{
+            @include desktop {
+                padding-bottom: 20px;
+            }
         }
     }
-}
 
-.navbar-collapse {
-    justify-content: flex-end;
-    margin-right: 5%;
-}
-
-.navbar-toggler {
-    border: 0;
-    outline: 0;
-}
-
-.navbar-toggler:focus {
-    box-shadow: none;
-}
-
-.rounded-20{
-    border-radius: 20px;
-}
-
-.nav-bg {
-    background-color: ghostwhite;
-    .navbar {
-        padding: 10px 0;
+    .navbar-collapse {
+        justify-content: flex-end;
+        margin-right: 5%;
     }
-}
 
-.nav-item {
-    position: relative;
-
-    text-align: center;
-    padding: 20px 10px;
-    @include desktop {
-        padding: 0;
+    .navbar-toggler {
+        border: 0;
+        outline: 0;
     }
-}
 
-.nav-link {
-    position: relative;
-    height: max-content;
-    width: max-content;
-    padding-block: 0;
-}
-
-.navbar-nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.nav-link[href="#home-anchor"]::after{
-    transform: scaleX(1);
-}
-
-.nav-link::after {
-    content: "";
-    position: absolute;
-
-    top: 99%;
-    left: 0;
-    width: 100%;
-
-    background-color: $text-color-dark;
-    height: 2px;
-    transform: scaleX(0);
-    transform-origin: center;
-    transition: 350ms;
-}
-
-.nav-link:not(.nav-link[href="#"]):is(:hover, :focus)::after {
-    transform: scaleX(1);
-}
-
-
-
-.nav-item[data-redirect]::before {
-    content: '';
-    position: absolute;
-    background-color: $text-color-dark;
-    top: 15%;
-    bottom: 15%;
-    width: 1px;
-    left: -5%;
-
-    @include desktop {
-        width: 0;
-        height: 0;
+    .navbar-toggler:focus {
+        box-shadow: none;
     }
-}
 
+    .rounded-20{
+        border-radius: 20px;
+    }
+
+    .nav-bg {
+        background-color: ghostwhite;
+        .navbar {
+            padding: 10px 0;
+        }
+    }
+
+    .nav-item {
+        position: relative;
+
+        text-align: center;
+        padding: 20px 10px;
+        @include desktop {
+            padding: 0;
+        }
+    }
+
+    .nav-link {
+        position: relative;
+        height: max-content;
+        width: max-content;
+        padding-block: 0;
+    }
+
+    .navbar-nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-link[href="#home-anchor"]::after{
+        transform: scaleX(1);
+    }
+
+    .nav-link::after {
+        content: "";
+        position: absolute;
+
+        top: 99%;
+        left: 0;
+        width: 100%;
+
+        background-color: $text-color-dark;
+        height: 2px;
+        transform: scaleX(0);
+        transform-origin: center;
+        transition: 350ms;
+    }
+
+    .nav-link:not(.nav-link[href="#"]):is(:hover, :focus)::after {
+        transform: scaleX(1);
+    }
+
+
+
+    .nav-item[data-redirect]::before {
+        content: '';
+        position: absolute;
+        background-color: $text-color-dark;
+        top: 15%;
+        bottom: 15%;
+        width: 1px;
+        left: -5%;
+
+        @include desktop {
+            width: 0;
+            height: 0;
+        }
+    }
 </style>

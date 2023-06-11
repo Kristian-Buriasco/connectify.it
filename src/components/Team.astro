@@ -136,100 +136,99 @@ import TeamBgDots from "../images/background-shape/team-bg-dots.webp";
 
 
 <style lang="scss">
-@import "../styles/variables.scss";
+    @import "../styles/variables.scss";
 
-.team {
-    overflow: visible;
-    position: relative;
-
-    &-slider {
-        overflow: hidden;
-        padding-bottom: 100px;
-
-        .slick-list {
+    .team {
         overflow: visible;
-        }
+        position: relative;
 
-        .slick-arrow {
-            border: 0;
-            background: transparent;
-            color: $primary-color;
-            position: absolute;
-            bottom: 0;
-            z-index: 1;
-            font-size: 25px;
+        &-slider {
+            overflow: hidden;
+            padding-bottom: 100px;
 
-            &.slick-disabled {
-                color: lighten($color: $primary-color, $amount: 30);
+            .slick-list {
+            overflow: visible;
+            }
+
+            .slick-arrow {
+                border: 0;
+                background: transparent;
+                color: $primary-color;
+                position: absolute;
+                bottom: 0;
+                z-index: 1;
+                font-size: 25px;
+
+                &.slick-disabled {
+                    color: lighten($color: $primary-color, $amount: 30);
+                }
+            }
+
+            .prevArrow {
+                left: 10px;
+            }
+
+            .nextArrow {
+                left: 50px;
             }
         }
 
-        .prevArrow {
-            left: 10px;
+        &-member {
+            padding: 30px 45px;
+            background: $white;
+            box-shadow: 0px 23px 43px 0px rgba(172, 189, 199, 0.49);
+            margin: 0 20px;
+
+            @include desktop-lg {
+            padding: 30px;
+            }
         }
 
-        .nextArrow {
-            left: 50px;
+        &-bg {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index: -1;
+        }
+
+        &-bg-shape-1 {
+            position: absolute;
+            top: 100px;
+            left: 20px;
+            z-index: -1;
+            @include tablet {
+            display: none;
+            }
+        }
+
+        &-bg-shape-2 {
+            position: absolute;
+            top: 100px;
+            right: -5px;
+            z-index: -1;
+            @include tablet {
+            display: none;
+            }
+        }
+
+        &-bg-shape-3 {
+            position: absolute;
+            bottom: 20%;
+            right: 40%;
+            z-index: -1;
+            @include tablet {
+            display: none;
+            }
+        }
+
+        &-bg-shape-4 {
+            position: absolute;
+            bottom: 20%;
+            right: 180px;
+            z-index: -1;
+            @include tablet {
+            display: none;
+            }
         }
     }
-
-    &-member {
-        padding: 30px 45px;
-        background: $white;
-        box-shadow: 0px 23px 43px 0px rgba(172, 189, 199, 0.49);
-        margin: 0 20px;
-
-        @include desktop-lg {
-        padding: 30px;
-        }
-    }
-
-    &-bg {
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        z-index: -1;
-    }
-
-    &-bg-shape-1 {
-        position: absolute;
-        top: 100px;
-        left: 20px;
-        z-index: -1;
-        @include tablet {
-        display: none;
-        }
-    }
-
-    &-bg-shape-2 {
-        position: absolute;
-        top: 100px;
-        right: -5px;
-        z-index: -1;
-        @include tablet {
-        display: none;
-        }
-    }
-
-    &-bg-shape-3 {
-        position: absolute;
-        bottom: 20%;
-        right: 40%;
-        z-index: -1;
-        @include tablet {
-        display: none;
-        }
-    }
-
-    &-bg-shape-4 {
-        position: absolute;
-        bottom: 20%;
-        right: 180px;
-        z-index: -1;
-        @include tablet {
-        display: none;
-        }
-    }
-}
-
 </style>

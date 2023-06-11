@@ -40,51 +40,50 @@
 
 
 <style lang="scss">
-.custom-cursor {
-    display: none;
-    position: fixed;
-    pointer-events: none;
-    mix-blend-mode: difference;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: white;
-    transform: translate(-50%, -50%) scale(.3);
-    z-index: 2147483647;
-}
-
-
-* {
-    cursor: none !important;
-}
-
-.custom-cursor-hover {
-    background-color: rgb(0 0 0 / 0.2);
-
-    border: 3px solid black;
-    mix-blend-mode: normal;
-
-    animation-name: pulse;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-}
-
-
-@keyframes pulse {
-    10% {
-        transform: translate(-50%, -50%) scale(0.5);
-        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+    .custom-cursor {
+        display: none;
+        position: fixed;
+        pointer-events: none;
+        mix-blend-mode: difference;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: white;
+        transform: translate(-50%, -50%) scale(.3);
+        z-index: 2147483647;
     }
-    
-    60% {
-        transform: translate(-50%, -50%) scale(0.6);
-        box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
-    }
-    
-    100% {
-        transform: translate(-50%, -50%) scale(0.5);
-        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-    }
-}
 
+
+    * {
+        cursor: none !important;
+    }
+
+    .custom-cursor-hover {
+        background-color: rgb(0 0 0 / 0.2);
+
+        border: 3px solid black;
+        mix-blend-mode: normal;
+
+        animation-name: pulse;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+    }
+
+
+    @keyframes pulse {
+        10% {
+            transform: translate(-50%, -50%) scale(0.5);
+            box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+        }
+        
+        60% {
+            transform: translate(-50%, -50%) scale(0.6);
+            box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+        }
+        
+        100% {
+            transform: translate(-50%, -50%) scale(0.5);
+            box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+        }
+    }
 </style>

@@ -84,62 +84,6 @@ import TeamBgTriangle from "../images/background-shape/team-bg-triangle.webp";
 </Layout>
 
 
-<script type="text/javascript">
-    window.addEventListener("beforeunload", () => {
-    window.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: "instant",
-    });
-});
-
-$(window).on("load", () => {
-    document.documentElement.style.height = "";
-    document.documentElement.style.overflowY = "";
-    document.body.style.height = "";
-    document.body.style.overflowY = "";
-})
-
-// custom cursor 
-const links = $("a, button, select, .hoverable");
-const mouse_cursor = $(".custom-cursor");
-
-links
-    .on("mouseover", () => {
-        mouse_cursor.addClass("custom-cursor-hover");
-    })
-    .on("mouseout", () => {
-        mouse_cursor.removeClass("custom-cursor-hover");
-    })
-
-
-$(window).on("mousemove", (e) => {
-    const x = e.clientX + "px";
-    const y = e.clientY + "px";
-
-    mouse_cursor.show();
-
-    mouse_cursor.css({
-        left: x,
-        top: y
-    })
-})
-
-// to remove cursor on mobile
-$(window).on("touchend", (e) => {
-    const { target } = e;
-
-    target.focus();
-    target.click();
-
-    mouse_cursor.hide();
-    
-    e.preventDefault();
-})
-</script>
-
-
-
 <style lang="scss">
 @import "../styles/variables.scss";
 
