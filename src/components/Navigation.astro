@@ -78,10 +78,7 @@ import Logo from "../images/logo.webp";
 
     function SetActivePageNavbarLi()
     {
-        const pagename = window.location.pathname.substring(window.location.pathname.indexOf("/")) || "index";
-        const page = pagename;
-
-        console.log(pagename, page);
+        const page = window.location.pathname.substring(window.location.pathname.indexOf("/")) || "index";
 
         const nav = $(".navigation");
 

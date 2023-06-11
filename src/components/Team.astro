@@ -11,77 +11,84 @@ import TeamBgDots from "../images/background-shape/team-bg-dots.webp";
 
 <section class="section fp-auto-height p-auto-width-responsive section-lg team" id="team" data-anchor="team-anchor">
     <div class="container-fluid">
-    <div class="row">
-        <div class="col-lg-12 text-center">
-        <h2 class="section-title">Il nostro team</h2>
+        <div class="row">
+            <div class="col-lg-12 text-center">
+            <h2 class="section-title">Il nostro team</h2>
+            </div>
         </div>
-    </div>
-    <div class="col-10 mx-auto">
-        <div class="team-slider">
-        <!-- team-member -->
-        <div class="team-member hoverable">
-            <div class="d-flex mb-4">
-            <div class="me-3">
-                <img class="rounded-circle img-fluid" src={Team1} alt="team-member">
-            </div>
-            <div class="align-self-center">
-                <h4>Kristian Buriasco</h4>
-                <h6 class="text-color">web designer</h6>
-            </div>
-            </div>
-            <p>
-            Sono Kristian e ho una passione per la fotografia,
-            la videografia e il design. Unisco queste competenze
-            per creare soluzioni creative e uniche.
-            Con un occhio per i dettagli e conoscenza delle tecnologie digitali,
-            porto la mia visione artistica in ogni progetto.
-            Continuo a migliorare le mie competenze per portare
-            la mia creatività a livelli sempre più elevati
-            </p>
-        </div>
+        <div class="col-10 mx-auto">
+            <div class="team-slider">
+                <!-- team-member -->
+                <div class="team-member hoverable">
+                    <div class="d-flex mb-4">
+                    <div class="me-3">
+                        <img class="rounded-circle img-fluid" src={Team1} alt="team-member">
+                    </div>
+                    <div class="align-self-center">
+                        <h4>Kristian Buriasco</h4>
+                        <h6 class="text-color">web designer</h6>
+                    </div>
+                    </div>
+                    <p>
+                    Sono Kristian e ho una passione per la fotografia,
+                    la videografia e il design. Unisco queste competenze
+                    per creare soluzioni creative e uniche.
+                    Con un occhio per i dettagli e conoscenza delle tecnologie digitali,
+                    porto la mia visione artistica in ogni progetto.
+                    Continuo a migliorare le mie competenze per portare
+                    la mia creatività a livelli sempre più elevati
+                    </p>
+                </div>
 
-        <!-- team-member -->
-        <div class="team-member hoverable">
-            <div class="d-flex mb-4">
-            <div class="me-3">
-                <img class="rounded-circle img-fluid" src={Team2} alt="team-member">
-            </div>
-            <div class="align-self-center">
-                <h4>Lorenzo Marchisio</h4>
-                <h6 class="text-color">web developer</h6>
-            </div>
-            </div>
-            <p>
-            Sono Lorenzo, appassionato di tecnologia.
-            Creo programmi e siti web combinando la mia conoscenza
-            dell'informatica e la mia creatività.
-            Mi tengo sempre aggiornato per garantire
-            che i miei progetti siano all'avanguardia.
-            Mi concentro sulla creazione di soluzioni
-            efficienti e di alta qualità.
-            </p>
-        </div>
+                <!-- team-member -->
+                <div class="team-member hoverable">
+                    <div class="d-flex mb-4">
+                    <div class="me-3">
+                        <img class="rounded-circle img-fluid" src={Team2} alt="team-member">
+                    </div>
+                    <div class="align-self-center">
+                        <h4>Lorenzo Marchisio</h4>
+                        <h6 class="text-color">web developer</h6>
+                    </div>
+                    </div>
+                    <p>
+                    Sono Lorenzo, appassionato di tecnologia.
+                    Creo programmi e siti web combinando la mia conoscenza
+                    dell'informatica e la mia creatività.
+                    Mi tengo sempre aggiornato per garantire
+                    che i miei progetti siano all'avanguardia.
+                    Mi concentro sulla creazione di soluzioni
+                    efficienti e di alta qualità.
+                    </p>
+                </div>
 
-        <!-- team-member -->
-        <div class="team-member hoverable">
-            <div class="d-flex mb-4">
-            <div class="me-3">
-                <img class="rounded-circle img-fluid" src={Team3} alt="team-member">
+                <!-- team-member -->
+                <div class="team-member hoverable">
+                    <div class="d-flex mb-4">
+                    <div class="me-3">
+                        <img class="rounded-circle img-fluid" src={Team3} alt="team-member">
+                    </div>
+                    <div class="align-self-center">
+                        <h4>Alberto Gonella</h4>
+                        <h6 class="text-color">web developer</h6>
+                    </div>
+                    </div>
+                    <p>
+                    Sono Alberto, appassionato di informatica e programmazione.
+                    Ogni giorno amo sperimentare nuove tecnologie per ampliare
+                    sempre di più le mie conoscenze per creare soluzioni sempre
+                    più innovative per migliorare la vita delle persone.</p>
+                </div>
             </div>
-            <div class="align-self-center">
-                <h4>Alberto Gonella</h4>
-                <h6 class="text-color">web developer</h6>
-            </div>
-            </div>
-            <p>
-            Sono Alberto, appassionato di informatica e programmazione.
-            Ogni giorno amo sperimentare nuove tecnologie per ampliare
-            sempre di più le mie conoscenze per creare soluzioni sempre
-            più innovative per migliorare la vita delle persone.</p>
-        </div>
 
+            <button class="slick-arrow prevArrow hoverable">
+                <span class="material-symbols-outlined">arrow_back</span>
+            </button>
+            <button class="slick-arrow nextArrow hoverable">
+                <span class="material-symbols-outlined">arrow_forward</span>
+            </button>
+            
         </div>
-    </div>
     </div>
     <!-- backgound image -->
     <img src={TeamBg} alt="team-bg" class="img-fluid team-bg">
@@ -100,34 +107,35 @@ import TeamBgDots from "../images/background-shape/team-bg-dots.webp";
             speed: 1000,
             autoplay: true,
             autoplaySpeed: 5000,
+
             slidesToShow: 3,
             slidesToScroll: 1,
+
             arrows: true,
-            prevArrow:
-                "<button type='button' class='prevArrow' aria-label='Previous'><i class='ti-arrow-left'></i></button>",
-            nextArrow:
-                "<button type='button' class='nextArrow' aria-label='Next'><i class='ti-arrow-right'></i></button>",
+            prevArrow: $(".prevArrow"),
+            nextArrow: $(".nextArrow"),
+
             responsive: [
                 {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 1,
-                },
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                    },
                 },
                 {
                 breakpoint: 991,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                },
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                    },
                 },
                 {
                 breakpoint: 767,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                },
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                    },
                 },
             ],
         });
@@ -143,34 +151,34 @@ import TeamBgDots from "../images/background-shape/team-bg-dots.webp";
         position: relative;
 
         &-slider {
-            overflow: hidden;
-            padding-bottom: 100px;
+            overflow: hidden !important;
+            padding-bottom: 100px !important;
 
             .slick-list {
-            overflow: visible;
+                overflow: visible;
             }
+        }
 
-            .slick-arrow {
-                border: 0;
-                background: transparent;
-                color: $primary-color;
-                position: absolute;
-                bottom: 0;
-                z-index: 1;
-                font-size: 25px;
+        .slick-arrow {
+            border: 0;
+            background: transparent;
+            color: $primary-color;
+            position: absolute;
+            bottom: 0;
+            z-index: 1;
+            font-size: 25px;
 
-                &.slick-disabled {
-                    color: lighten($color: $primary-color, $amount: 30);
-                }
+            &.slick-disabled {
+                color: lighten($color: $primary-color, $amount: 30);
             }
+        }
+        
+        .prevArrow {
+            left: 10px !important;
+        }
 
-            .prevArrow {
-                left: 10px;
-            }
-
-            .nextArrow {
-                left: 50px;
-            }
+        .nextArrow {
+            left: 50px !important;
         }
 
         &-member {
