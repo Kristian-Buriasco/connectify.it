@@ -99,6 +99,10 @@ import Logo from "../images/logo.webp";
 
     .navigation {
         transition: .3s ease;
+
+        @include desktop {
+            background-color: ghostwhite;
+        }
     }
 
     .navbar {
@@ -137,11 +141,21 @@ import Logo from "../images/logo.webp";
 
     .nav-item {
         position: relative;
-
         text-align: center;
         padding: 20px 10px;
+
+        margin-block-end: 10px;
         @include desktop {
-            padding: 0;
+            font-size: 1.35rem;
+            letter-spacing: 0.25ch;
+
+            :not(.nav-link[href="#home-anchor"]) {
+                opacity: 0.85;
+            }
+
+            :is(:hover, :focus).nav-link {
+                opacity: 1
+            }
         }
     }
 
@@ -193,8 +207,10 @@ import Logo from "../images/logo.webp";
         left: -5%;
 
         @include desktop {
-            width: 0;
-            height: 0;
+            left: -175%;
+            width: 475%;
+            height: 1px;
+            top: -5%;
         }
     }
 </style>
