@@ -5,25 +5,27 @@ import Logo from "../images/logo.webp";
 <section class="fixed-top navigation">
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/">
-                <img
-                    src={Logo}
-                    alt="logo"
-                    width="204px"
-                    height="35px"
-                />
-            </a>
-            <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarNav"
-                aria-controls="navbarNav"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-            >
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <div class="navbar-headers">
+                <a class="navbar-brand" href="/">
+                    <img
+                        src={Logo}
+                        alt="logo"
+                        width="204px"
+                        height="35px"
+                    />
+                </a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav nav-bg rounded-20">
                     <li class="nav-item">
@@ -70,8 +72,12 @@ import Logo from "../images/logo.webp";
     document.addEventListener("DOMContentLoaded", () =>{
         SetActivePageNavbarLi();
 
+        $(".navbar-toggler").on("click", () => {
+            $(".navigation").toggleClass("expanded");
+        });
+
         // close the navbar on click of a link
-        $('.navbar-nav li a').on('click', function(){
+        $('.navbar-nav li a').on('click', () => {
             $('.navbar-collapse').collapse('hide');
         });
     });
@@ -102,6 +108,10 @@ import Logo from "../images/logo.webp";
 
         @include desktop {
             background-color: ghostwhite;
+
+            & .navbar {
+                height: 100%;
+            }
         }
     }
 
@@ -114,6 +124,12 @@ import Logo from "../images/logo.webp";
         }
     }
 
+    .navbar-headers {
+        width: 100%;
+        margin-bottom: auto;
+        display: flex;
+    }
+
     .navbar-collapse {
         justify-content: flex-end;
         margin-right: 5%;
@@ -122,6 +138,7 @@ import Logo from "../images/logo.webp";
     .navbar-toggler {
         border: 0;
         outline: 0;
+        margin-left: auto;
     }
 
     .navbar-toggler:focus {
@@ -207,10 +224,7 @@ import Logo from "../images/logo.webp";
         left: -5%;
 
         @include desktop {
-            left: -175%;
-            width: 475%;
-            height: 1px;
-            top: -5%;
+            display: none;
         }
     }
 </style>
