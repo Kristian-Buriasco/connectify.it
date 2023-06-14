@@ -125,6 +125,7 @@ import Logo from "../images/logo.webp";
     }
 
     .navbar-headers {
+        margin-block: auto;
         width: 100%;
         margin-bottom: auto;
         display: flex;
@@ -161,10 +162,13 @@ import Logo from "../images/logo.webp";
         text-align: center;
         padding: 20px 10px;
 
-        margin-block-end: 10px;
         @include desktop {
             font-size: 1.35rem;
             letter-spacing: 0.25ch;
+            
+            & + & {
+                margin-block-start: 10px;
+            }
 
             :not(.nav-link[href="#home-anchor"]) {
                 opacity: 0.85;
